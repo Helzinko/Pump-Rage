@@ -9,6 +9,8 @@
         <e p="Scripts" t="Include">
           <e p="Bullet.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="IDamageable.cs" t="Include" />
           <e p="MovementController.cs" t="Include" />
           <e p="ShotgunController.cs" t="Include" />
         </e>
