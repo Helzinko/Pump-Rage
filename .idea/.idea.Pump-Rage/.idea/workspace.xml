@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/idle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/idle.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mixamo/PlayerController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mixamo/PlayerController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Breathing Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Breathing Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Run Backwards.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Run Backwards.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612200543705</updated>
       <workItem from="1612200548825" duration="7879000" />
-      <workItem from="1612286752277" duration="1276000" />
+      <workItem from="1612286752277" duration="2555000" />
     </task>
     <servers />
   </component>
