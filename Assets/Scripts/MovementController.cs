@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Player : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
     public float movementSpeed = 5;
     private Vector3 _velocity;
