@@ -12,6 +12,13 @@ public class ShotgunController : MonoBehaviour
 
     private float _nextFireTime;
 
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButton(0))
@@ -25,8 +32,9 @@ public class ShotgunController : MonoBehaviour
         if (Time.time > _nextFireTime)
         {
             _nextFireTime = Time.time + timeBetweenFire / 1000;
-            Bullet newBullet = Instantiate(bullet, muzzle.position, muzzle.rotation) as Bullet;
+            Bullet newBullet = Instantiate(bullet, muzzle.position, muzzle.rotation);
             newBullet.SetBulletSpeed(bulletSpeed);
+            _animator.SetTrigger("shoot");
         }
     }
 }
