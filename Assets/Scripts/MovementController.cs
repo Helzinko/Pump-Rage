@@ -23,6 +23,7 @@ public class MovementController : MonoBehaviour
     private float _forwardAmount;
     private float _turnAmount;
 
+    public GameObject shotgun;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
