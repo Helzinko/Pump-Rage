@@ -23,6 +23,8 @@ public class ShotgunController : MonoBehaviour
 
     public Transform[] BulletSpawns;
 
+    public bool multipleShot = false;
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -44,6 +46,8 @@ public class ShotgunController : MonoBehaviour
     {
         if (Time.time > _nextFireTime)
         {
+            multipleShot = false;
+            
             _nextFireTime = Time.time + timeBetweenFire / 1000;
 
             TripleShoot();
@@ -60,7 +64,6 @@ public class ShotgunController : MonoBehaviour
         for (int i = 0; i < BulletSpawns.Length; i++)
         {
             Bullet newBullet = Instantiate(bullet, muzzle.position, BulletSpawns[i].rotation);
-            Debug.Log(BulletSpawns[i].rotation);
             newBullet.SetBulletSpeed(bulletSpeed);
         }
     }

@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +37,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/BulletController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IDamageable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Shell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MuzzleFlash.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BulletSpawnRotation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ntDYVZPVTq7jtOUuDKlMk9ziOT" />
@@ -94,6 +96,7 @@
       <workItem from="1612986801765" duration="2599000" />
       <workItem from="1613034729946" duration="3975000" />
       <workItem from="1613121404018" duration="5495000" />
+      <workItem from="1613148079986" duration="6153000" />
     </task>
     <servers />
   </component>
