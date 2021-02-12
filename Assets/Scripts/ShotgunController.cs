@@ -21,6 +21,8 @@ public class ShotgunController : MonoBehaviour
 
     private MuzzleFlash _muzzleFlash;
 
+    public Transform[] BulletSpawns;
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -43,13 +45,23 @@ public class ShotgunController : MonoBehaviour
         if (Time.time > _nextFireTime)
         {
             _nextFireTime = Time.time + timeBetweenFire / 1000;
-            Bullet newBullet = Instantiate(bullet, muzzle.position, _player.transform.rotation);
-            newBullet.SetBulletSpeed(bulletSpeed);
+
+            TripleShoot();
     
             _muzzleFlash.Activate();
             Instantiate(shell, shellSpawn.position, shellSpawn.rotation);
             
             _animator.SetTrigger("shoot");
+        }
+    }
+
+    private void TripleShoot()
+    {
+        for (int i = 0; i < BulletSpawns.Length; i++)
+        {
+            Bullet newBullet = Instantiate(bullet, muzzle.position, BulletSpawns[i].rotation);
+            Debug.Log(BulletSpawns[i].rotation);
+            newBullet.SetBulletSpeed(bulletSpeed);
         }
     }
 }
