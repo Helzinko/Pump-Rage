@@ -52,6 +52,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Update()
     {
+        if (_currentState == State.Dead)
+            return;
+        
         if (_currentState == State.Chasing)
         {
             _navMeshAgent.SetDestination(_player.position);
@@ -74,6 +77,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     void FixedUpdate()
     {
+        if (_currentState == State.Dead)
+            return;
+        
         if (Time.time > _nextAttackTime)
         {
             float sqrDistanceToPlayer = (_player.position - transform.position).sqrMagnitude;
@@ -97,6 +103,9 @@ public class Enemy : MonoBehaviour, IDamageable
     
     public void TakeHit(float damage, RaycastHit hit)
     {
+        if (_currentState == State.Dead)
+            return;
+        
         _currentState = State.Stunned;
         
         _health -= damage;
@@ -111,6 +120,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (_health <= 0)
         {
             Die();
+            return;
         }
         
         Invoke("RemoveStun", .5f);
@@ -124,6 +134,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void RemoveStun()
     {
+        if (_currentState == State.Dead)
+            return;
+        
         _currentState = State.Chasing;
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
@@ -137,6 +150,17 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Die()
     {
-        Destroy(gameObject);
+        _navMeshAgent.enabled = false;
+        GameObject enemySplashEffect = Instantiate(splashEffect, transform.position, transform.rotation);
+        Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
+        Quaternion decalRotation = Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z);
+        GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
+        Destroy(enemySplashEffect, 1f);
+        _currentState = State.Dead;
+        _animator.SetTrigger("die");
+        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;
+        _rigidbody.isKinematic = true;
+        GetComponent<Collider>().enabled = false;
     }
 }
