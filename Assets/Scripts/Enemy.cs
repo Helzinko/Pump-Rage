@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private GameObject _shotgun;
 
     public GameObject splashEffect;
+    public GameObject[] decalObjects;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -114,6 +115,10 @@ public class Enemy : MonoBehaviour, IDamageable
         
         Invoke("RemoveStun", .5f);
         GameObject enemySplashEffect = Instantiate(splashEffect, transform.position, transform.rotation);
+
+        Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
+        Quaternion decalRotation = Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z);
+        GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
         Destroy(enemySplashEffect, 1f);
     }
 
