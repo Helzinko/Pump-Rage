@@ -20,6 +20,7 @@ public class HealthBarController : MonoBehaviour
     public Color blinkColor;
 
     public TMP_Text healthCount;
+    public TMP_Text rageCount;
 
     private float _currentHealth = 100;
     private void Start()
@@ -49,15 +50,30 @@ public class HealthBarController : MonoBehaviour
     private void ChangeHealthSprite(float fillAmount)
     {
         if (fillAmount > 0.8f)
+        {
+            rageCount.text = "1";
             healthImage.sprite = characterSprites[0];
+        }
         else if (fillAmount < 0.8f && fillAmount > 0.6f)
+        {
+            rageCount.text = "2";
             healthImage.sprite = characterSprites[1];
+        }
         else if (fillAmount < 0.6f && fillAmount > 0.4f)
+        {
+            rageCount.text = "3";
             healthImage.sprite = characterSprites[2];
+        }
         else if (fillAmount < 0.4f && fillAmount > 0f)
+        {
+            rageCount.text = "4";
             healthImage.sprite = characterSprites[3];
+        }
         else if (fillAmount <= 0f)
+        {
+            rageCount.text = "0";
             healthImage.sprite = characterSprites[4];
+        }
     }
 
     IEnumerator HealthFillBlink()
