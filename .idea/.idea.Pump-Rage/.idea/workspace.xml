@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +96,7 @@
       <workItem from="1614098306718" duration="8324000" />
       <workItem from="1614168175972" duration="4231000" />
       <workItem from="1614193327609" duration="710000" />
-      <workItem from="1614251879708" duration="607000" />
+      <workItem from="1614251879708" duration="1393000" />
     </task>
     <servers />
   </component>
