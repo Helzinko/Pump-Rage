@@ -40,8 +40,6 @@ public class ShotgunController : MonoBehaviour
         {
             Shoot();
         }
-        
-        transform.LookAt(new Vector3(0, 0, 0));
     }
 
     private void Shoot()

@@ -47,7 +47,7 @@ public class MovementController : MonoBehaviour
 
     void Dash(Vector3 force)
     {
-        _rigidbody.AddForce(force * 25f, ForceMode.VelocityChange);
+        _rigidbody.AddForce(force * 1200f * Time.fixedDeltaTime, ForceMode.VelocityChange);
         isDashing = true;
         _animator.SetTrigger("Roll");
         Invoke("RemoveDashForce", 0.4665f);
@@ -61,16 +61,42 @@ public class MovementController : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
-                    Dash(Vector3.forward);
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        transform.rotation = Quaternion.AngleAxis(45, Vector3.up);
+                        Dash(new Vector3(0.75f, 0, 0.75f));
+                    }
+                    else if (Input.GetKey(KeyCode.A))
+                    {
+                        transform.rotation = Quaternion.AngleAxis(-45, Vector3.up);
+                        Dash(new Vector3(-0.75f, 0, 0.75f));
+                    }
+                    else
+                    {
+                        transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
+                        Dash(Vector3.forward);
+                    }
                 }
             }
             else if (Input.GetKey(KeyCode.S))
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
-                    Dash(Vector3.back);
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        transform.rotation = Quaternion.AngleAxis(135, Vector3.up);
+                        Dash(new Vector3(0.75f, 0, -0.75f));
+                    }
+                    else if (Input.GetKey(KeyCode.A))
+                    {
+                        transform.rotation = Quaternion.AngleAxis(225, Vector3.up);
+                        Dash(new Vector3(-0.75f, 0, -0.75f));
+                    }
+                    else
+                    {
+                        transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
+                        Dash(Vector3.back);
+                    }
                 }
             }
             else if (Input.GetKey(KeyCode.D))
