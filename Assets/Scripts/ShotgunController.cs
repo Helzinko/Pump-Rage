@@ -36,7 +36,7 @@ public class ShotgunController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !_player.GetComponent<MovementController>().isDashing)
         {
             Shoot();
         }

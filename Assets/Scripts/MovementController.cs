@@ -26,6 +26,8 @@ public class MovementController : MonoBehaviour
     public GameObject crosshair;
 
     public GameObject shotgun;
+
+    public bool isDashing = false;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -36,8 +38,59 @@ public class MovementController : MonoBehaviour
         _cam = _camera.transform;
     }
 
+    void RemoveDashForce()
+    {
+        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;
+        isDashing = false;
+    }
+
+    void Dash(Vector3 force)
+    {
+        _rigidbody.AddForce(force * 25f, ForceMode.VelocityChange);
+        isDashing = true;
+        _animator.SetTrigger("Roll");
+        Invoke("RemoveDashForce", 0.4665f);
+    }
+
     void Update()
     {
+        if (!isDashing)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
+                    Dash(Vector3.forward);
+                }
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
+                    Dash(Vector3.back);
+                }
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    transform.rotation = Quaternion.AngleAxis(90, Vector3.up);
+                    Dash(Vector3.right);
+                }
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    transform.rotation = Quaternion.AngleAxis(-90, Vector3.up);
+                    Dash(Vector3.left);
+                }
+            }
+        }
+        
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
 
@@ -67,7 +120,9 @@ public class MovementController : MonoBehaviour
         
         var point = ray.GetPoint(rayDistance);
         var lookPoint = new Vector3(point.x, transform.position.y, point.z);
-        transform.LookAt(lookPoint);
+        
+        if(!isDashing)
+            transform.LookAt(lookPoint);
         crosshair.transform.position = point;
     }
 
@@ -99,6 +154,7 @@ public class MovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + _playerVelocity * Time.fixedDeltaTime);
+        if(!isDashing)
+            _rigidbody.MovePosition(_rigidbody.position + _playerVelocity * Time.fixedDeltaTime);
     }
 }

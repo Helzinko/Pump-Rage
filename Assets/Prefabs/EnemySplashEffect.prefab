@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4505803189606443779}
   - component: {fileID: 4505803189606443778}
   m_Layer: 0
-  m_Name: GreenEnemySplash
+  m_Name: EnemySplashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4976,8 +4976,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.29411766, g: 0.4431373, b: 0.27450982, a: 1}
-      maxColor: {r: 0.48940903, g: 0.735849, b: 0.50173104, a: 1}
+      minColor: {r: 0.42056772, g: 0.29214135, b: 0.6132076, a: 1}
+      maxColor: {r: 0.6144454, g: 0.5071645, b: 0.8207547, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.60784316, g: 0.5764706, b: 0.7372549, a: 1}
@@ -5039,7 +5039,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
+      scalar: 0.7
       minScalar: 0.3
       maxCurve:
         serializedVersion: 2
