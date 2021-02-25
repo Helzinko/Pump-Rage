@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recordings/zombie_knockback_splash.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Recordings/zombie_knockback_splash.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +39,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Shell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MuzzleFlash.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BulletSpawnRotation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthBarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ntDYVZPVTq7jtOUuDKlMk9ziOT" />
@@ -102,6 +99,8 @@
       <workItem from="1613148079986" duration="6779000" />
       <workItem from="1614098306718" duration="8324000" />
       <workItem from="1614168175972" duration="4231000" />
+      <workItem from="1614193327609" duration="710000" />
+      <workItem from="1614251879708" duration="607000" />
     </task>
     <servers />
   </component>

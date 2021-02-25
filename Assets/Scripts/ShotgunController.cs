@@ -25,6 +25,8 @@ public class ShotgunController : MonoBehaviour
 
     public bool multipleShot = false;
 
+    public CameraShake cameraShake;
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -47,7 +49,7 @@ public class ShotgunController : MonoBehaviour
         if (Time.time > _nextFireTime)
         {
             multipleShot = false;
-            
+            StartCoroutine(cameraShake.Shake(.15f, .1f));
             _nextFireTime = Time.time + timeBetweenFire / 1000;
 
             TripleShoot();
