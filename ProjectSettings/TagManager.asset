@@ -19,7 +19,7 @@ TagManager:
   - GameObject
   - Floor
   - Player
-  - 
+  - Crosshair
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3861519073
     locked: 0

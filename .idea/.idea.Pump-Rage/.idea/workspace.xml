@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="" />
+    <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +36,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/BulletController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IDamageable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Shell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MuzzleFlash.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BulletSpawnRotation.cs" />
@@ -39,6 +43,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthBarController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
     </changedPaths>
   </component>
@@ -96,7 +101,7 @@
       <workItem from="1614098306718" duration="8324000" />
       <workItem from="1614168175972" duration="4231000" />
       <workItem from="1614193327609" duration="710000" />
-      <workItem from="1614251879708" duration="1393000" />
+      <workItem from="1614251879708" duration="2341000" />
     </task>
     <servers />
   </component>

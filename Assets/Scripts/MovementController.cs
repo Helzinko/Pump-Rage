@@ -23,12 +23,14 @@ public class MovementController : MonoBehaviour
     private float _forwardAmount;
     private float _turnAmount;
 
+    public GameObject crosshair;
+
     public GameObject shotgun;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _camera = Camera.main;
-        _groundObject = new Plane(Vector3.up, Vector3.zero);
+        _groundObject = new Plane(Vector3.up, Vector3.up * shotgun.transform.position.y);
 
         _animator = GetComponent<Animator>();
         _cam = _camera.transform;
@@ -66,6 +68,7 @@ public class MovementController : MonoBehaviour
         var point = ray.GetPoint(rayDistance);
         var lookPoint = new Vector3(point.x, transform.position.y, point.z);
         transform.LookAt(lookPoint);
+        crosshair.transform.position = point;
     }
 
     private void Move(Vector3 move)
