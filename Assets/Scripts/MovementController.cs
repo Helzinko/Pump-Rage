@@ -28,6 +28,8 @@ public class MovementController : MonoBehaviour
     public GameObject shotgun;
 
     public bool isDashing = false;
+
+    private PlayerStateController stateController;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -36,6 +38,7 @@ public class MovementController : MonoBehaviour
 
         _animator = GetComponent<Animator>();
         _cam = _camera.transform;
+        stateController = GetComponent<PlayerStateController>();
     }
 
     void RemoveDashForce()
@@ -55,7 +58,7 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
-        if (!isDashing)
+        if (!isDashing && !stateController.isDead)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -135,7 +138,8 @@ public class MovementController : MonoBehaviour
             _move.Normalize();
         }
 
-        Move(_move);
+        if(!stateController.isDead)
+            Move(_move);
         
         _playerVelocity = (new Vector3(horizontal, 
             0, vertical)).normalized * movementSpeed;
@@ -147,7 +151,7 @@ public class MovementController : MonoBehaviour
         var point = ray.GetPoint(rayDistance);
         var lookPoint = new Vector3(point.x, transform.position.y, point.z);
         
-        if(!isDashing)
+        if(!isDashing && !stateController.isDead)
             transform.LookAt(lookPoint);
         crosshair.transform.position = point;
     }
@@ -180,7 +184,7 @@ public class MovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!isDashing)
+        if(!isDashing && !stateController.isDead)
             _rigidbody.MovePosition(_rigidbody.position + _playerVelocity * Time.fixedDeltaTime);
     }
 }

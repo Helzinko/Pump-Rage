@@ -39,6 +39,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public GameObject splashEffect;
     public GameObject[] decalObjects;
+
+    public GameObject punchObject;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -46,8 +48,7 @@ public class Enemy : MonoBehaviour, IDamageable
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _shotgun = GameObject.FindGameObjectWithTag("shotgun");
         _rigidbody = GetComponent<Rigidbody>();
-        
-        _currentState = State.Idle;
+        punchObject.SetActive(false);
     }
 
     private void Update()
@@ -70,16 +71,18 @@ public class Enemy : MonoBehaviour, IDamageable
     
     private IEnumerator Attack()
     {
+        punchObject.SetActive(true);
         _animator.SetBool("chase", false);
         _currentState = State.Attacking;
         yield return new WaitForSeconds(1f);
+        punchObject.SetActive(false);
     }
 
     void FixedUpdate()
     {
         if (_currentState == State.Dead)
             return;
-        
+
         if (Time.time > _nextAttackTime)
         {
             float sqrDistanceToPlayer = (_player.position - transform.position).sqrMagnitude;

@@ -26,17 +26,20 @@ public class ShotgunController : MonoBehaviour
     public bool multipleShot = false;
 
     public CameraShake cameraShake;
+    
+    private PlayerStateController _stateController;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
         _player = GameObject.FindGameObjectWithTag("Player");
         _muzzleFlash = GetComponent<MuzzleFlash>();
+        _stateController = _player.GetComponent<PlayerStateController>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && !_player.GetComponent<MovementController>().isDashing)
+        if (Input.GetMouseButton(0) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead)
         {
             Shoot();
         }

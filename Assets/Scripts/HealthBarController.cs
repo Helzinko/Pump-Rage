@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class HealthBarController : MonoBehaviour
 {
-    private float _playerHealth;
-    
     public Image healthImage;
     public Image fillImage;
     public Image numberBackgroundImage;
@@ -28,23 +26,13 @@ public class HealthBarController : MonoBehaviour
         _fillImageColor = fillImage.color;
     }
 
-    private void Update()
+    public void ChangeBarData(float currentHealth)
     {
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            fillImage.fillAmount -= 0.10f;
-            _currentHealth = fillImage.fillAmount * 100;
-            healthCount.text = Mathf.Round(_currentHealth).ToString();
-            ChangeHealthSprite(fillImage.fillAmount);
-            StartCoroutine("HealthFillBlink");
-        }
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            fillImage.fillAmount += 0.10f;
-            _currentHealth = fillImage.fillAmount * 100;
-            healthCount.text = Mathf.Round(_currentHealth).ToString();
-            ChangeHealthSprite(fillImage.fillAmount);
-        }
+        fillImage.fillAmount = currentHealth / 100;
+        _currentHealth = fillImage.fillAmount * 100;
+        healthCount.text = Mathf.Round(_currentHealth).ToString();
+        ChangeHealthSprite(fillImage.fillAmount);
+        StartCoroutine("HealthFillBlink");
     }
 
     private void ChangeHealthSprite(float fillAmount)
