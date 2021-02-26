@@ -13,9 +13,16 @@ public class PlayerStateController : MonoBehaviour
     public GameObject[] decalObjects;
 
     private Animator _animator;
+
+    public GameObject deathText;
     private void Start()
     {
         _animator = GetComponent<Animator>();
+    }
+
+    private void ShowDeathText()
+    {
+        deathText.SetActive(true);
     }
 
     public void TakeDamage(float damageAmount)
@@ -28,6 +35,7 @@ public class PlayerStateController : MonoBehaviour
         {
             _animator.SetTrigger("Die");
             isDead = true;
+            Invoke("ShowDeathText", 2f);
         }
 
         healthBarController.GetComponent<HealthBarController>().ChangeBarData(playerHealth);
