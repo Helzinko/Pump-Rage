@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _player = GameObject.FindGameObjectWithTag("playerBody").transform;
         _shotgun = GameObject.FindGameObjectWithTag("shotgun");
         _rigidbody = GetComponent<Rigidbody>();
         punchObject.SetActive(false);

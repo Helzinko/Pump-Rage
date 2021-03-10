@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            if(_stateController)
+            if(_stateController.isDead)
                 Application.LoadLevel(Application.loadedLevel);
         }
     }
