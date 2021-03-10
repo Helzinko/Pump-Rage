@@ -28,6 +28,11 @@ public class ShotgunController : MonoBehaviour
     public CameraShake cameraShake;
     
     private PlayerStateController _stateController;
+    
+    public int currentBulletsCount = 7;
+    public int _maxBulletCount = 7;
+
+    public GameObject gameManager;
 
     private void Start()
     {
@@ -35,6 +40,7 @@ public class ShotgunController : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player");
         _muzzleFlash = GetComponent<MuzzleFlash>();
         _stateController = _player.GetComponent<PlayerStateController>();
+        gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
     }
 
     private void Update()
@@ -43,11 +49,20 @@ public class ShotgunController : MonoBehaviour
         {
             Shoot();
         }
+
+        if (Input.GetKey(KeyCode.R) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead)
+        {
+            // reload animation
+            
+            //
+            currentBulletsCount = _maxBulletCount;
+            gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
+        }
     }
 
     private void Shoot()
     {
-        if (Time.time > _nextFireTime)
+        if (Time.time > _nextFireTime && currentBulletsCount > 0)
         {
             multipleShot = false;
             StartCoroutine(cameraShake.Shake(.15f, .1f));
@@ -59,6 +74,8 @@ public class ShotgunController : MonoBehaviour
             Instantiate(shell, shellSpawn.position, shellSpawn.rotation);
             
             _animator.SetTrigger("shoot");
+            currentBulletsCount--;
+            gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
         }
     }
 

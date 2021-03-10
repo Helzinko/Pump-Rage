@@ -19,7 +19,9 @@
           <e p="MuzzleFlash.cs" t="Include" />
           <e p="PlayerStateController.cs" t="Include" />
           <e p="Shell.cs" t="Include" />
+          <e p="ShotgunBarController.cs" t="Include" />
           <e p="ShotgunController.cs" t="Include" />
+          <e p="ShotgunLevelController.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

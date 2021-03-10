@@ -41,6 +41,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public GameObject[] decalObjects;
 
     public GameObject punchObject;
+
+    public float xpValue = 10;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -165,5 +167,9 @@ public class Enemy : MonoBehaviour, IDamageable
         _rigidbody.angularVelocity = Vector3.zero;
         _rigidbody.isKinematic = true;
         GetComponent<Collider>().enabled = false;
+        
+        // +xp
+        GameObject gameManager = GameObject.FindWithTag("GameController");
+        gameManager.GetComponent<ShotgunLevelController>().GetXp(xpValue);
     }
 }
