@@ -22,6 +22,7 @@
           <e p="ShotgunBarController.cs" t="Include" />
           <e p="ShotgunController.cs" t="Include" />
           <e p="ShotgunLevelController.cs" t="Include" />
+          <e p="ShotgunUpgradeController.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

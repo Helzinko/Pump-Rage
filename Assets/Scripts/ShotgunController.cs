@@ -50,7 +50,7 @@ public class ShotgunController : MonoBehaviour
             Shoot();
         }
 
-        if (Input.GetKey(KeyCode.R) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead)
+        if (Input.GetKeyDown(KeyCode.R) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead)
         {
             // reload animation
             

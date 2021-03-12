@@ -9,21 +9,22 @@ public class GameManager : MonoBehaviour
     
     private GameObject _player;
     private PlayerStateController _stateController;
-    
+
     void Start()
     {
         Cursor.visible = visibleMouse;
-        
+
         _player = GameObject.FindGameObjectWithTag("Player");
         _stateController = _player.GetComponent<PlayerStateController>();
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(_stateController.isDead)
+            if (_stateController.isDead)
                 Application.LoadLevel(Application.loadedLevel);
         }
+
     }
 }
