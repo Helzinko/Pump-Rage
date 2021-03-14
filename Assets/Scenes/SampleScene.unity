@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -1798,7 +1798,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -2415,7 +2415,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -3125,7 +3125,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -3742,7 +3742,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -4816,7 +4816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -5441,7 +5441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -6088,7 +6088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -6264,7 +6264,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -7010,7 +7010,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -8084,7 +8084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -8856,7 +8856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -9082,7 +9082,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -10421,7 +10421,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -11038,7 +11038,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -11691,7 +11691,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -12604,7 +12604,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -13221,7 +13221,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -14513,7 +14513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -15112,7 +15112,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -16208,7 +16208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -16833,7 +16833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -17458,7 +17458,7 @@ GameObject:
   - component: {fileID: 575336672}
   - component: {fileID: 575336671}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: bulletDamageLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18135,7 +18135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -18347,6 +18347,7 @@ GameObject:
   - component: {fileID: 605194284}
   - component: {fileID: 605194286}
   - component: {fileID: 605194285}
+  - component: {fileID: 605194287}
   m_Layer: 5
   m_Name: UpgradeBackground
   m_TagString: Untagged
@@ -18419,6 +18420,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605194283}
   m_CullTransparentMesh: 0
+--- !u!225 &605194287
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605194283}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &615404182
 GameObject:
   m_ObjectHideFlags: 0
@@ -19001,7 +19014,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -19619,7 +19632,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 656200406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 942979765}
+        m_MethodName: UpgradeBulletDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &656200406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19737,7 +19761,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -20354,7 +20378,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -21428,7 +21452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -21654,7 +21678,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -22480,7 +22504,7 @@ GameObject:
   - component: {fileID: 708393528}
   - component: {fileID: 708393527}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: bulletCountLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23151,7 +23175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -23932,7 +23956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -24919,7 +24943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -25712,7 +25736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -26664,7 +26688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -27445,7 +27469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -28024,6 +28048,7 @@ GameObject:
   - component: {fileID: 942979761}
   - component: {fileID: 942979763}
   - component: {fileID: 942979764}
+  - component: {fileID: 942979765}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -28044,12 +28069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visibleMouse: 0
-  upgradeTable: {fileID: 605194283}
-  crossair: {fileID: 2033930612}
-  objectsToDisable:
-  - {fileID: 934442754}
-  - {fileID: 1487751533}
-  isUpgrading: 0
 --- !u!4 &942979762
 Transform:
   m_ObjectHideFlags: 0
@@ -28094,6 +28113,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentXp: 0
   currentLevel: 1
+--- !u!114 &942979765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942979760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15df925f2e18e745a2883a1aa4d6fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradePointsText: {fileID: 1453467663}
+  experiencePointsFillImage: {fileID: 2012429026}
+  currentLevelText: {fileID: 765282625}
+  upgradeTable: {fileID: 605194287}
+  crossair: {fileID: 2033930612}
+  objectsToDisable:
+  - {fileID: 934442754}
+  - {fileID: 1487751533}
+  isUpgrading: 0
+  bulletRangeLevelText: {fileID: 1200014104}
+  bulletLifeTime: 0.1
+  bulletDamageLevelText: {fileID: 575336671}
+  bulletDamage: 1
+  bulletCountLevelText: {fileID: 708393527}
 --- !u!1 &947065618
 GameObject:
   m_ObjectHideFlags: 0
@@ -28725,7 +28770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -28893,7 +28938,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -30358,7 +30403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -31152,7 +31197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -31434,7 +31479,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -32929,7 +32974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -33977,7 +34022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -34604,7 +34649,7 @@ GameObject:
   - component: {fileID: 1200014105}
   - component: {fileID: 1200014104}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: bulletRangeLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34812,7 +34857,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -35367,7 +35412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -35535,7 +35580,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -36254,7 +36299,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -36964,7 +37009,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -38094,7 +38139,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -40219,7 +40264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -41351,7 +41396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -41526,7 +41571,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1554066673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 942979765}
+        m_MethodName: UpgradeBulletRange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1554066673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42194,7 +42250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -42877,7 +42933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -43502,7 +43558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -44338,7 +44394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -44663,7 +44719,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -45280,7 +45336,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1635252987}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 942979765}
+        m_MethodName: ExitUpgradeBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1635252987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45555,7 +45622,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -46172,7 +46239,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -46789,7 +46856,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -48199,7 +48266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -48496,7 +48563,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -49576,7 +49643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -50343,7 +50410,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -51053,7 +51120,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -51670,7 +51737,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -53504,7 +53571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -54187,7 +54254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -54336,7 +54403,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.685
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -54429,7 +54496,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
@@ -55561,7 +55628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -56333,8 +56400,8 @@ MonoBehaviour:
   - {fileID: 321994405}
   multipleShot: 0
   cameraShake: {fileID: 963194231}
-  currentBulletsCount: 7
-  _maxBulletCount: 7
+  currentBulletsCount: 4
+  _maxBulletCount: 4
   gameManager: {fileID: 942979760}
 --- !u!4 &2111426031 stripped
 Transform:
@@ -56423,7 +56490,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2113766468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 942979765}
+        m_MethodName: UpgradeBulletCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2113766468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57291,7 +57369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690991a002848cd4787d236b3a0720d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _health: 1.5
   splashEffect: {fileID: 4505803189606443805, guid: 9b0148ac19e5f6146b1c03b9d9a91452,
     type: 3}
   decalObjects:
@@ -57465,7 +57543,7 @@ PrefabInstance:
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}
       propertyPath: _health
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 423055953456979620, guid: cdf16f80e95e94d44841173c79e14f36,
         type: 3}

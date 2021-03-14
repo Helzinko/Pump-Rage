@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public LayerMask collisionMask;
     private float _damage = 1;
 
+    private float _bulletLifeTime;
+
     public void SetBulletSpeed(float speed)
     {
         _speed = speed;
@@ -44,6 +46,9 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 0.15f);
+        GameObject gameManager = GameObject.FindWithTag("GameController");
+        _bulletLifeTime = gameManager.GetComponent<ShotgunUpgradeController>().bulletLifeTime;
+        _damage = gameManager.GetComponent<ShotgunUpgradeController>().bulletDamage;
+        Destroy(gameObject, _bulletLifeTime);
     }
 }

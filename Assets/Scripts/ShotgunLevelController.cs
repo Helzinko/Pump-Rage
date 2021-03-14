@@ -18,6 +18,7 @@ public class ShotgunLevelController : MonoBehaviour
     {
         currentXp += xp;
         GetComponent<ShotgunBarController>().ChangeLevelBarValue(currentXp/_nextLevelXp);
+        GetComponent<ShotgunUpgradeController>().AddExperiencePoints(currentXp/_nextLevelXp);
 
         if (currentXp >= _nextLevelXp)
             LevelUp();
@@ -30,5 +31,9 @@ public class ShotgunLevelController : MonoBehaviour
         _nextLevelXp += _nextLevelXp / 10;
         GetComponent<ShotgunBarController>().ChangeLevelValue(currentLevel);
         GetComponent<ShotgunBarController>().ChangeLevelBarValue(currentXp/_nextLevelXp);
+        
+        GetComponent<ShotgunUpgradeController>().AddUpgradePoint(1);
+        GetComponent<ShotgunUpgradeController>().AddExperiencePoints(currentXp/_nextLevelXp);
+        GetComponent<ShotgunUpgradeController>().AddLevel(currentLevel);
     }
 }
