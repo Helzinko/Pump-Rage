@@ -107,7 +107,7 @@ public class ShotgunUpgradeController : MonoBehaviour
     }
 
     
-    // special upgrades
+    // upgrades
     
     public void UpgradeBulletRange()
     {

@@ -18,6 +18,7 @@
           <e p="MovementController.cs" t="Include" />
           <e p="MuzzleFlash.cs" t="Include" />
           <e p="PlayerStateController.cs" t="Include" />
+          <e p="RangeEnemy.cs" t="Include" />
           <e p="Shell.cs" t="Include" />
           <e p="ShotgunBarController.cs" t="Include" />
           <e p="ShotgunController.cs" t="Include" />
