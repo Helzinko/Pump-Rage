@@ -16,12 +16,15 @@ public class RangeEnemy : MonoBehaviour, IDamageable
         Dead
     }
 
+    public Spit spit;
+    public Transform spitSpawn;
+    
     private State _currentState;
     
     private NavMeshAgent _navMeshAgent;
     private Transform _player;
 
-    private float _attackDistance = 5f;
+    public float _attackDistance = 30f;
     private float _timeBetweenAttacks = 1;
     private float _nextAttackTime;
 
@@ -54,7 +57,7 @@ public class RangeEnemy : MonoBehaviour, IDamageable
     {
         if (_currentState == State.Dead)
             return;
-        
+
         if (_currentState == State.Chasing)
         {
             _navMeshAgent.SetDestination(_player.position);
@@ -70,25 +73,44 @@ public class RangeEnemy : MonoBehaviour, IDamageable
     
     private IEnumerator Attack()
     {
+        _navMeshAgent.isStopped = true;
         _animator.SetBool("chase", false);
         _currentState = State.Attacking;
+        
+        Spit newSpit = Instantiate(spit, spitSpawn.position, spitSpawn.rotation);
+        newSpit.SetSpitSpeed(70f);
+        
         yield return new WaitForSeconds(1f);
+        
+        if(_currentState != State.Dead)
+            _navMeshAgent.isStopped = false;
     }
 
     void FixedUpdate()
     {
         if (_currentState == State.Dead)
             return;
+        
+        if (_currentState != State.Idle)
+            transform.LookAt(_player);
 
         if (Time.time > _nextAttackTime)
         {
             float sqrDistanceToPlayer = (_player.position - transform.position).sqrMagnitude;
             if (sqrDistanceToPlayer < Mathf.Pow(_attackDistance, 2))
             {
-                _nextAttackTime = Time.time + _timeBetweenAttacks;
-                transform.LookAt(_player);
-                _animator.SetTrigger("attack");
-                StartCoroutine("Attack");
+                RaycastHit hit;
+                var rayDirection = _player.position - transform.position;
+                if (Physics.Raycast (transform.position, rayDirection, out hit)) {
+                    if (hit.transform.CompareTag("Player")) {
+                        _nextAttackTime = Time.time + _timeBetweenAttacks;
+                        _animator.SetTrigger("attack");
+                        StartCoroutine("Attack");
+                    } else {
+                        _animator.SetBool("chase", true);
+                        _currentState = State.Chasing;
+                    }
+                }
             }
             else
             {
