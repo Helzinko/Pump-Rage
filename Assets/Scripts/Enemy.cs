@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private float _timeBetweenAttacks = 1;
     private float _nextAttackTime;
 
-    private float _smellDistance = 30f;
+    private float _smellDistance = 15f;
 
     private bool smelledPlayer = false;
 
