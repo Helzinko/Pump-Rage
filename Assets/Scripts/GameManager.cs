@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
         _player = GameObject.FindGameObjectWithTag("Player");
         _stateController = _player.GetComponent<PlayerStateController>();
+        
+        GameObject.FindGameObjectWithTag("soundtrack").GetComponent<SoundtrackController>().PlayMusic();
     }
 
     private void Update()

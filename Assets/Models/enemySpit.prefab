@@ -232,6 +232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 5120
+    m_Bits: 7168
   spitSplashEffect: {fileID: 4505803189606443805, guid: 5f81894aff5ea5844a8c9e660ede3626,
+    type: 3}
+  spitDecal: {fileID: 6429079163047106420, guid: 8d5efc9d202a18749a3d409d9d5d55fe,
     type: 3}

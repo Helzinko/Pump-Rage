@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/rangeEnemyController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/rangeEnemyController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/enemySpit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/enemySpit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recordings/UI Showcase.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Recordings/UI Showcase.mp4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +128,8 @@
       <workItem from="1615566672428" duration="3884000" />
       <workItem from="1615716821211" duration="5736000" />
       <workItem from="1615800736999" duration="3351000" />
-      <workItem from="1615896300503" duration="3453000" />
+      <workItem from="1615896300503" duration="5622000" />
+      <workItem from="1616406913223" duration="7000" />
     </task>
     <servers />
   </component>

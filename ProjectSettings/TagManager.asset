@@ -9,6 +9,7 @@ TagManager:
   - playerBody
   - block
   - enemyTarget
+  - soundtrack
   layers:
   - Default
   - TransparentFX
