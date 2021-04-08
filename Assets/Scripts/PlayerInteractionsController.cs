@@ -1,12 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteractionsController : MonoBehaviour
 {
     public GameObject exitText;
 
     private bool _canExit = false;
+
+    public Animator transition;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("exit"))
@@ -35,8 +40,19 @@ public class PlayerInteractionsController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(_canExit)
-                Debug.Log("Go");
+            if (_canExit)
+            {
+                StartCoroutine(LoadLevel(0));
+            }
         }
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("end");
+
+        yield return new WaitForSeconds(1f);
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
