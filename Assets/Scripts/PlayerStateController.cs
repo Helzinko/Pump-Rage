@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerStateController : MonoBehaviour
 {
     public bool isDead = false;
-    public float playerHealth = 100f;
+    public float playerHealth;
     public GameObject healthBarController;
 
     public GameObject splashEffect;
@@ -15,9 +15,12 @@ public class PlayerStateController : MonoBehaviour
     private Animator _animator;
 
     public GameObject deathText;
+    
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        playerHealth = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetPlayerHealth();
+        healthBarController.GetComponent<HealthBarController>().ChangeBarData(playerHealth);
     }
 
     private void ShowDeathText()
@@ -31,10 +34,13 @@ public class PlayerStateController : MonoBehaviour
             return;
         
         playerHealth -= damageAmount;
+        GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetPlayerHealth(playerHealth);
+        
         if (playerHealth <= 0)
         {
             _animator.SetTrigger("Die");
             isDead = true;
+            GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().RestoreDefault();
             Invoke("ShowDeathText", 2f);
         }
 

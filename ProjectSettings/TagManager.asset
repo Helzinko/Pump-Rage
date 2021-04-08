@@ -11,6 +11,7 @@ TagManager:
   - enemyTarget
   - soundtrack
   - exit
+  - variables
   layers:
   - Default
   - TransparentFX

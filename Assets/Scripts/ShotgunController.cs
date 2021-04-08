@@ -29,13 +29,16 @@ public class ShotgunController : MonoBehaviour
     
     private PlayerStateController _stateController;
     
-    public int currentBulletsCount = 7;
+    public int currentBulletsCount;
     public int _maxBulletCount = 7;
 
     public GameObject gameManager;
 
     private void Start()
     {
+        currentBulletsCount = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>()
+            .GetCurrentBulletCount();
+        
         _animator = GetComponent<Animator>();
         _player = GameObject.FindGameObjectWithTag("Player");
         _muzzleFlash = GetComponent<MuzzleFlash>();
@@ -57,6 +60,7 @@ public class ShotgunController : MonoBehaviour
             //
             currentBulletsCount = _maxBulletCount;
             gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
+            GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
         }
     }
 
@@ -76,6 +80,7 @@ public class ShotgunController : MonoBehaviour
             _animator.SetTrigger("shoot");
             currentBulletsCount--;
             gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
+            GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
         }
     }
 

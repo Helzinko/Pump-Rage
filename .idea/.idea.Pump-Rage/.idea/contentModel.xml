@@ -27,6 +27,7 @@
           <e p="ShotgunUpgradeController.cs" t="Include" />
           <e p="SoundtrackController.cs" t="Include" />
           <e p="Spit.cs" t="Include" />
+          <e p="Variables.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
