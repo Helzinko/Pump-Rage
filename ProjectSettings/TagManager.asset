@@ -10,6 +10,7 @@ TagManager:
   - block
   - enemyTarget
   - soundtrack
+  - exit
   layers:
   - Default
   - TransparentFX

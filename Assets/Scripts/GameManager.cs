@@ -10,8 +10,15 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
     private PlayerStateController _stateController;
 
+    private int enemyCount;
+
+    public bool enemiesCleared = false;
+
     void Start()
     {
+        GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("enemy");
+        enemyCount = allEnemies.Length;
+
         Cursor.visible = visibleMouse;
 
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -28,5 +35,16 @@ public class GameManager : MonoBehaviour
                 Application.LoadLevel(Application.loadedLevel);
         }
 
+    }
+
+    public void enemyCalculator()
+    {
+        enemyCount--;
+
+        if (enemyCount <= 0)
+        {
+            enemiesCleared = true;
+        }
+        
     }
 }

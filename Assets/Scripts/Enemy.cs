@@ -155,6 +155,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Die()
     {
+        GameObject.FindWithTag("GameController").GetComponent<GameManager>().enemyCalculator();
+
         _navMeshAgent.enabled = false;
         GameObject enemySplashEffect = Instantiate(splashEffect, transform.position, transform.rotation);
         Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
