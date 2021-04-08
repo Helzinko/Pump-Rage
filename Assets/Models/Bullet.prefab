@@ -111,9 +111,6 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 1536
-  miniCubeObject: {fileID: 3573771778802425011, guid: 6bcd39e7440250549a01faffdaa8f3da,
-    type: 3}
-  miniCubeCount: 50
 --- !u!54 &-4261284802215034592
 Rigidbody:
   m_ObjectHideFlags: 0

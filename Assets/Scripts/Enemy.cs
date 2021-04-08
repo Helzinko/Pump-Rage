@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private NavMeshAgent _navMeshAgent;
     private Transform _player;
 
-    private float _attackDistance = 5f;
+    private float _attackDistance = 8f;
     private float _timeBetweenAttacks = 1;
     private float _nextAttackTime;
 
