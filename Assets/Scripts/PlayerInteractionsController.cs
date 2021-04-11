@@ -47,7 +47,7 @@ public class PlayerInteractionsController : MonoBehaviour
         }
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    public IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("end");
 
