@@ -32,6 +32,8 @@ public class ShotgunController : MonoBehaviour
     public int currentBulletsCount;
     public int _maxBulletCount = 7;
 
+    public AudioSource shotSound;
+
     public GameObject gameManager;
 
     private void Start()
@@ -81,6 +83,7 @@ public class ShotgunController : MonoBehaviour
             currentBulletsCount--;
             gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
             GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
+            shotSound.Play();
         }
     }
 
