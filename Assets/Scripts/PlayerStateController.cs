@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerStateController : MonoBehaviour
@@ -16,6 +17,9 @@ public class PlayerStateController : MonoBehaviour
 
     public GameObject deathText;
     
+    public TMP_Text scoreText;
+    public TMP_Text highScoreText;
+    
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -26,6 +30,20 @@ public class PlayerStateController : MonoBehaviour
     private void ShowDeathText()
     {
         deathText.SetActive(true);
+
+        int currentScore = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentScore();
+        
+        scoreText.text = "Neutralized infected persons: <color=red>" + currentScore + "</color>";
+
+        int highscore = PlayerPrefs.GetInt("highScore", 0);
+
+        if (currentScore > highscore)
+        {
+            highscore = currentScore;
+            PlayerPrefs.SetInt("highScore", highscore);
+        }
+        
+        highScoreText.text = "Highscore: <color=red>" + highscore + "</color>";
     }
 
     public void TakeDamage(float damageAmount)

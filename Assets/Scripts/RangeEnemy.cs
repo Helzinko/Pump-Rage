@@ -172,7 +172,7 @@ public class RangeEnemy : MonoBehaviour, IDamageable
 
     private void Die()
     {
-        GameObject.FindWithTag("GameController").GetComponent<GameManager>().enemyCalculator();
+        GameObject.FindWithTag("GameController").GetComponent<GameManager>().enemyCalculator(2);
         
         _navMeshAgent.enabled = false;
         GameObject enemySplashEffect = Instantiate(splashEffect, transform.position, transform.rotation);

@@ -18,7 +18,8 @@ public class Variables : MonoBehaviour
     public int currentBulletDamageLevel = 0;
     public int currentBulletCountLevel = 0;
 
-
+    public int currentScore = 0;
+    
     private static Variables _variablesInstance;
     private void Awake()
     {
@@ -135,5 +136,14 @@ public class Variables : MonoBehaviour
         currentBulletCountLevel = newBulletCountLevel;
     }
 
+    public int GetCurrentScore()
+    {
+        return currentScore;
+    }
+
+    public void SetCurrentScore(int newScore)
+    {
+        currentScore += newScore;
+    }
     
 }
