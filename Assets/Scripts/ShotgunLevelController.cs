@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShotgunLevelController : MonoBehaviour
@@ -8,6 +9,8 @@ public class ShotgunLevelController : MonoBehaviour
     public float currentXp = 0;
     private int _nextLevelXp = 100;
     public int currentLevel = 1;
+
+    public GameObject upgradeAddedText;
 
     private void Start()
     {
@@ -43,13 +46,25 @@ public class ShotgunLevelController : MonoBehaviour
         GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentShotgunXp(currentXp);
         GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentShotgunLevel(currentLevel);
         GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentNextLevelXp(_nextLevelXp);
-
-
+        
         GetComponent<ShotgunBarController>().ChangeLevelValue(currentLevel);
         GetComponent<ShotgunBarController>().ChangeLevelBarValue(currentXp/_nextLevelXp);
         
-        GetComponent<ShotgunUpgradeController>().AddUpgradePoint(1);
         GetComponent<ShotgunUpgradeController>().AddExperiencePoints(currentXp/_nextLevelXp);
         GetComponent<ShotgunUpgradeController>().AddLevel(currentLevel);
+
+        AddUpgradePoint();
+    }
+
+    public void AddUpgradePoint()
+    {
+        GetComponent<ShotgunUpgradeController>().AddUpgradePoint(1);
+        upgradeAddedText.SetActive(true);
+        Invoke("DisableUpgradeAddedText", 2.5f);
+    }
+
+    private void DisableUpgradeAddedText()
+    {
+        upgradeAddedText.SetActive(false);
     }
 }

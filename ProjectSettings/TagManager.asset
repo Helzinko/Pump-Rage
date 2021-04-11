@@ -12,6 +12,8 @@ TagManager:
   - soundtrack
   - exit
   - variables
+  - upgradePickup
+  - healthPickup
   layers:
   - Default
   - TransparentFX

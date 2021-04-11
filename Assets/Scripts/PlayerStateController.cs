@@ -19,6 +19,8 @@ public class PlayerStateController : MonoBehaviour
     
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
+
+    public GameObject healthAddedText;
     
     private void Start()
     {
@@ -71,5 +73,24 @@ public class PlayerStateController : MonoBehaviour
         Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
         Quaternion decalRotation = Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z);
         GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
+    }
+
+    public void AddHealth(float healthAmount)
+    {
+        if (playerHealth >= 90)
+            playerHealth = 100;
+
+        playerHealth += healthAmount;
+        
+        GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetPlayerHealth(playerHealth);
+        healthBarController.GetComponent<HealthBarController>().ChangeBarData(playerHealth);
+        
+        healthAddedText.SetActive(true);
+        Invoke("DisableHealthAddedText", 2.5f);
+    }
+    
+    private void DisableHealthAddedText()
+    {
+        healthAddedText.SetActive(false);
     }
 }

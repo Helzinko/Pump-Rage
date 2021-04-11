@@ -246,9 +246,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7917118182182370161}
+  - component: {fileID: 7282133017514678407}
   m_Layer: 0
   m_Name: office_book_1_green
-  m_TagString: Untagged
+  m_TagString: upgradePickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,9 +261,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7391693033381847499}
-  m_LocalRotation: {x: -0, y: 0.4699879, z: -0, w: 0.88267285}
+  m_LocalRotation: {x: 0, y: 0.46998772, z: 0, w: 0.88267297}
   m_LocalPosition: {x: 10.71, y: 2.618, z: -1.423}
-  m_LocalScale: {x: 2.8988, y: 2.8988, z: 2.8988}
+  m_LocalScale: {x: 2.8988001, y: 2.8988, z: 2.8988001}
   m_Children:
   - {fileID: 6462357156186890260}
   - {fileID: 5980352449932756279}
@@ -272,6 +273,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 56.067, z: 0}
+--- !u!65 &7282133017514678407
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7391693033381847499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8540950053153468651
 GameObject:
   m_ObjectHideFlags: 0

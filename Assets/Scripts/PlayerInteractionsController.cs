@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,14 @@ public class PlayerInteractionsController : MonoBehaviour
 
     public Animator transition;
 
+    public GameObject pickupText;
+
+    private bool _canPickupUpgrade = false;
+    private GameObject _upgradePickupObject;
+    
+    private bool _canPickupHealth = false;
+    private GameObject _healthPickupObject;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("exit"))
@@ -21,6 +30,20 @@ public class PlayerInteractionsController : MonoBehaviour
                 exitText.SetActive(true);
                 _canExit = true;
             }
+        }
+        
+        else if (other.CompareTag("upgradePickup"))
+        {
+            pickupText.SetActive(true);
+            _canPickupUpgrade = true;
+            _upgradePickupObject = other.gameObject;
+        }
+        
+        else if (other.CompareTag("healthPickup"))
+        {
+            pickupText.SetActive(true);
+            _canPickupHealth = true;
+            _healthPickupObject = other.gameObject;
         }
     }
     
@@ -34,6 +57,20 @@ public class PlayerInteractionsController : MonoBehaviour
                 _canExit = false;
             }
         }
+        
+        if (other.CompareTag("upgradePickup"))
+        {
+            pickupText.SetActive(false);
+            _canPickupUpgrade = false;
+            _upgradePickupObject = new GameObject("EmptyObject");
+        }
+        
+        if (other.CompareTag("healthPickup"))
+        {
+            pickupText.SetActive(false);
+            _canPickupHealth = false;
+            _healthPickupObject = new GameObject("EmptyObject");
+        }
     }
     
     void Update()
@@ -43,6 +80,22 @@ public class PlayerInteractionsController : MonoBehaviour
             if (_canExit)
             {
                 StartCoroutine(LoadLevel(0));
+            }
+
+            else if (_canPickupUpgrade)
+            {
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<ShotgunLevelController>().AddUpgradePoint();
+                Destroy(_upgradePickupObject);
+                pickupText.SetActive(false);
+                _canPickupUpgrade = false;
+            }
+            
+            else if (_canPickupHealth)
+            {
+                GetComponent<PlayerStateController>().AddHealth(10);
+                Destroy(_healthPickupObject);
+                _canPickupHealth = false;
+                pickupText.SetActive(false);
             }
         }
     }

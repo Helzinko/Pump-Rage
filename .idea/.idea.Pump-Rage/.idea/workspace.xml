@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/furniture/office_book_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/furniture/office_book_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/furniture/office_book_1_green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/furniture/office_book_1_green.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Variables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Variables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,14 +58,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SoundtrackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunUpgradeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Variables.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ntDYVZPVTq7jtOUuDKlMk9ziOT" />
@@ -139,7 +140,7 @@
       <workItem from="1617183495711" duration="3415000" />
       <workItem from="1617884733573" duration="6537000" />
       <workItem from="1617954532856" duration="6347000" />
-      <workItem from="1618130539668" duration="3084000" />
+      <workItem from="1618130539668" duration="6917000" />
     </task>
     <servers />
   </component>
