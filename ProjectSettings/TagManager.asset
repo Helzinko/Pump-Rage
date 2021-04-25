@@ -15,6 +15,7 @@ TagManager:
   - upgradePickup
   - healthPickup
   - destroy
+  - enemyPart
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - Crosshair
   - MiniCube
   - shell
-  - 
+  - enemyPart
   - 
   - 
   - 

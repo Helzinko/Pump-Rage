@@ -21,11 +21,11 @@ public class Enemy : MonoBehaviour, IDamageable
     private NavMeshAgent _navMeshAgent;
     private Transform _player;
 
-    private float _attackDistance = 8f;
+    private float _attackDistance = 5f;
     private float _timeBetweenAttacks = 1;
     private float _nextAttackTime;
 
-    private float _smellDistance = 15f;
+    private float _smellDistance = 25f;
 
     private bool smelledPlayer = false;
 
@@ -49,6 +49,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public float power = 50.0f;
 
     public float xpValue = 10;
+
+    public GameObject spine;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -84,14 +86,7 @@ public class Enemy : MonoBehaviour, IDamageable
             }
         }
     }
-
-    IEnumerator SetEnemyRagdollTrigger()
-    {
-        yield return new WaitForSeconds(1f);
-        foreach (Rigidbody c in RagdollRigidbodies)
-        {
-        }
-    }
+    
     private void TurnOnRagdoll()
     {
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
@@ -108,8 +103,6 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             c.isTrigger = false;
         }
-
-        StartCoroutine("SetEnemyRagdollTrigger");
     }
 
     private void Update()
@@ -124,9 +117,12 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (Vector3.Distance(_player.position, transform.position) <= _smellDistance && !smelledPlayer)
         {
-            smelledPlayer = true;
-            _currentState = State.Chasing;
-            _animator.SetBool("chase", true);
+            if (_currentState != State.Stunned)
+            {
+                smelledPlayer = true;
+                _currentState = State.Chasing;
+                _animator.SetBool("chase", true);
+            }
         }
     }
     
@@ -135,7 +131,7 @@ public class Enemy : MonoBehaviour, IDamageable
         punchObject.SetActive(true);
         _animator.SetBool("chase", false);
         _currentState = State.Attacking;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.1f);
         punchObject.SetActive(false);
     }
 
@@ -158,8 +154,11 @@ public class Enemy : MonoBehaviour, IDamageable
             {
                 if (_currentState != State.Chasing && smelledPlayer)
                 {
-                    _animator.SetBool("chase", true);
-                    _currentState = State.Chasing;
+                    if (_currentState != State.Stunned)
+                    {
+                        _animator.SetBool("chase", true);
+                        _currentState = State.Chasing;
+                    }
                 }
             }
         }
@@ -171,15 +170,9 @@ public class Enemy : MonoBehaviour, IDamageable
             return;
         
         _currentState = State.Stunned;
-        
-        _health -= damage;
+        _navMeshAgent.enabled = false;
 
-        if (!_shotgun.GetComponent<ShotgunController>().multipleShot)
-        {
-            //_shotgun.GetComponent<ShotgunController>().multipleShot = true;
-           // Vector3 hitDirection = _player.transform.position - transform.position;
-            //_rigidbody.AddForce(-hitDirection.normalized * 15f, ForceMode.Impulse);
-        }
+        _health -= damage;
         
         if (_health <= 0)
         {
@@ -188,13 +181,13 @@ public class Enemy : MonoBehaviour, IDamageable
             return;
         }
         
-        //Invoke("RemoveStun", .5f);
-        GameObject enemySplashEffect = Instantiate(splashEffect, transform.position, transform.rotation);
-
-        Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
+        Invoke("RemoveStun", .1f);
+        var particlesSpawnVector = new Vector3(transform.position.x, 1f, transform.position.z);
+        GameObject splashParticles = Instantiate(splashEffect, particlesSpawnVector, transform.rotation);
+        Vector3 decalPosition = new Vector3(transform.position.x, -0.8f, transform.position.z);
         Quaternion decalRotation = Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z);
         GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
-        Destroy(enemySplashEffect, 1f);
+        Destroy(splashParticles, 1f);
     }
 
     public void RemoveStun()
@@ -202,15 +195,12 @@ public class Enemy : MonoBehaviour, IDamageable
         if (_currentState == State.Dead)
             return;
         
-        _currentState = State.Chasing;
-        _rigidbody.velocity = Vector3.zero;
-        _rigidbody.angularVelocity = Vector3.zero;
+        _navMeshAgent.enabled = true;
 
-        if (!smelledPlayer)
-        {
-            smelledPlayer = true;
-            _animator.SetBool("chase", true);
-        }
+        _currentState = State.Chasing;
+        
+        smelledPlayer = true;
+        _animator.SetBool("chase", true);
     }
 
     private void Die()
@@ -218,11 +208,12 @@ public class Enemy : MonoBehaviour, IDamageable
         GameObject.FindWithTag("GameController").GetComponent<GameManager>().enemyCalculator(1);
 
         _navMeshAgent.enabled = false;
-        GameObject enemySplashEffect = Instantiate(splashEffect, transform.position, transform.rotation);
-        Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
+        var particlesSpawnVector = new Vector3(transform.position.x, 1f, transform.position.z);
+        GameObject splashParticles = Instantiate(splashEffect, particlesSpawnVector, transform.rotation);
+        Vector3 decalPosition = new Vector3(transform.position.x, -0.8f, transform.position.z);
         Quaternion decalRotation = Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z);
         GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
-        Destroy(enemySplashEffect, 1f);
+        Destroy(splashParticles, 1f);
         _currentState = State.Dead;
         //_rigidbody.velocity = Vector3.zero;
         //_rigidbody.angularVelocity = Vector3.zero;

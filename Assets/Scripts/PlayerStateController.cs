@@ -70,7 +70,7 @@ public class PlayerStateController : MonoBehaviour
         Vector3 playerSplashPosition = new Vector3(transform.position.x, 2, transform.position.z);
         GameObject playerSplashEffect = Instantiate(splashEffect, playerSplashPosition, playerSplashRotation);
         Destroy(playerSplashEffect, 1f);
-        Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
+        Vector3 decalPosition = new Vector3(transform.position.x, -0.8f, transform.position.z);
         Quaternion decalRotation = Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z);
         GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
     }
