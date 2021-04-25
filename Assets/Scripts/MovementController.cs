@@ -43,6 +43,7 @@ public class MovementController : MonoBehaviour
 
     void RemoveDashForce()
     {
+        _rigidbody.drag = 50f;
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
         isDashing = false;
@@ -51,6 +52,7 @@ public class MovementController : MonoBehaviour
     void Dash(Vector3 force)
     {
         _rigidbody.AddForce(force * 1200f * Time.fixedDeltaTime, ForceMode.VelocityChange);
+        _rigidbody.drag = 0;
         isDashing = true;
         _animator.SetTrigger("Roll");
         Invoke("RemoveDashForce", 0.4665f);

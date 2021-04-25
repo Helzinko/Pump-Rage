@@ -42,6 +42,12 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public GameObject punchObject;
 
+    private List<Collider> RagdollColliders = new List<Collider>();
+    private List<Rigidbody> RagdollRigidbodies = new List<Rigidbody>();
+    
+    public float radius = 100.0f;
+    public float power = 50.0f;
+
     public float xpValue = 10;
     void Start()
     {
@@ -51,6 +57,59 @@ public class Enemy : MonoBehaviour, IDamageable
         _shotgun = GameObject.FindGameObjectWithTag("shotgun");
         _rigidbody = GetComponent<Rigidbody>();
         punchObject.SetActive(false);
+        SetRagdollParts();
+    }
+
+    private void SetRagdollParts()
+    {
+        Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
+        Rigidbody[] rigidbodies = gameObject.GetComponentsInChildren<Rigidbody>();
+
+        foreach (Collider c in colliders)
+        {
+            if (c.gameObject != this.gameObject)
+            {
+                c.isTrigger = true;
+                RagdollColliders.Add(c);
+            }
+        }
+        
+        foreach (Rigidbody c in rigidbodies)
+        {
+            if (c.gameObject != this.gameObject)
+            {
+                c.isKinematic = true;
+                RagdollRigidbodies.Add(c);
+            }
+        }
+    }
+
+    IEnumerator SetEnemyRagdollTrigger()
+    {
+        yield return new WaitForSeconds(1f);
+        foreach (Rigidbody c in RagdollRigidbodies)
+        {
+            //c.detectCollisions = false;
+        }
+    }
+    private void TurnOnRagdoll()
+    {
+        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        _animator.enabled = false;
+        
+        foreach (Rigidbody c in RagdollRigidbodies)
+        {
+            c.isKinematic = false;
+            Vector3 hitDirection = _player.transform.position - transform.position;
+            c.AddForce(-hitDirection.normalized * 100f, ForceMode.Impulse);
+        }
+        
+        foreach (Collider c in RagdollColliders)
+        {
+            c.isTrigger = false;
+        }
+
+        StartCoroutine("SetEnemyRagdollTrigger");
     }
 
     private void Update()
@@ -117,18 +176,19 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (!_shotgun.GetComponent<ShotgunController>().multipleShot)
         {
-            _shotgun.GetComponent<ShotgunController>().multipleShot = true;
-            Vector3 hitDirection = _player.transform.position - transform.position;
-            _rigidbody.AddForce(-hitDirection.normalized * 15f, ForceMode.Impulse);
+            //_shotgun.GetComponent<ShotgunController>().multipleShot = true;
+           // Vector3 hitDirection = _player.transform.position - transform.position;
+            //_rigidbody.AddForce(-hitDirection.normalized * 15f, ForceMode.Impulse);
         }
         
         if (_health <= 0)
         {
             Die();
+            TurnOnRagdoll();
             return;
         }
         
-        Invoke("RemoveStun", .5f);
+        //Invoke("RemoveStun", .5f);
         GameObject enemySplashEffect = Instantiate(splashEffect, transform.position, transform.rotation);
 
         Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
@@ -164,11 +224,10 @@ public class Enemy : MonoBehaviour, IDamageable
         GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
         Destroy(enemySplashEffect, 1f);
         _currentState = State.Dead;
-        _animator.SetTrigger("die");
-        _rigidbody.velocity = Vector3.zero;
-        _rigidbody.angularVelocity = Vector3.zero;
-        _rigidbody.isKinematic = true;
-        GetComponent<Collider>().enabled = false;
+        //_rigidbody.velocity = Vector3.zero;
+        //_rigidbody.angularVelocity = Vector3.zero;
+        //_rigidbody.isKinematic = true;
+        //GetComponent<Collider>().enabled = false;
         
         // +xp
         GameObject gameManager = GameObject.FindWithTag("GameController");

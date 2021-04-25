@@ -14,6 +14,7 @@ TagManager:
   - variables
   - upgradePickup
   - healthPickup
+  - destroy
   layers:
   - Default
   - TransparentFX
