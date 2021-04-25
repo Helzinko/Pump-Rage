@@ -69,6 +69,7 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             if (c.gameObject != this.gameObject)
             {
+                c.gameObject.layer = 16;
                 c.isTrigger = true;
                 RagdollColliders.Add(c);
             }
@@ -89,7 +90,6 @@ public class Enemy : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(1f);
         foreach (Rigidbody c in RagdollRigidbodies)
         {
-            //c.detectCollisions = false;
         }
     }
     private void TurnOnRagdoll()
