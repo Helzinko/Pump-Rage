@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public State _currentState;
     
-    private NavMeshAgent _navMeshAgent;
+    public NavMeshAgent _navMeshAgent;
     private Transform _player;
 
     private float _smellDistance = 25f;

@@ -8,7 +8,6 @@ public class Spit : MonoBehaviour
     public LayerMask collisionMask;
     private float _damage = 20;
     public GameObject spitSplashEffect;
-    public GameObject spitDecal;
 
     public void SetSpitSpeed(float speed)
     {
@@ -46,8 +45,7 @@ public class Spit : MonoBehaviour
         
         Vector3 decalPosition = new Vector3(transform.position.x, -0.3f, transform.position.z);
         Quaternion decalRotation = Quaternion.Euler(90f, transform.rotation.y, transform.rotation.z);
-        GameObject decalGameObject = Instantiate(spitDecal, decalPosition, decalRotation);
-        
+
         Destroy(gameObject);
     }
 
