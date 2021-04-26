@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemySplashEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemySplashEffect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GreenEnemySplash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GreenEnemySplash.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RangeEnemySplash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RangeEnemySplash.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerSplash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerSplash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +60,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyPunchController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MeleeEnemy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ntDYVZPVTq7jtOUuDKlMk9ziOT" />
@@ -141,6 +142,7 @@
       <workItem from="1618591419333" duration="893000" />
       <workItem from="1619362933486" duration="12731000" />
       <workItem from="1619385237447" duration="8536000" />
+      <workItem from="1619460729675" duration="917000" />
     </task>
     <servers />
   </component>

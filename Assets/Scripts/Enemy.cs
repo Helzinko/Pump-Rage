@@ -16,18 +16,14 @@ public class Enemy : MonoBehaviour, IDamageable
         Dead
     }
 
-    private State _currentState;
+    public State _currentState;
     
     private NavMeshAgent _navMeshAgent;
     private Transform _player;
 
-    private float _attackDistance = 5f;
-    private float _timeBetweenAttacks = 1;
-    private float _nextAttackTime;
-
     private float _smellDistance = 25f;
 
-    private bool smelledPlayer = false;
+    public bool smelledPlayer = false;
 
     private Animator _animator;
 
@@ -35,8 +31,6 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public GameObject splashEffect;
     public GameObject[] decalObjects;
-
-    public GameObject punchObject;
 
     private List<Collider> RagdollColliders = new List<Collider>();
     private List<Rigidbody> RagdollRigidbodies = new List<Rigidbody>();
@@ -47,7 +41,6 @@ public class Enemy : MonoBehaviour, IDamageable
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _player = GameObject.FindGameObjectWithTag("playerBody").transform;
-        punchObject.SetActive(false);
         SetRagdollParts();
     }
 
@@ -111,44 +104,6 @@ public class Enemy : MonoBehaviour, IDamageable
                 smelledPlayer = true;
                 _currentState = State.Chasing;
                 _animator.SetBool("chase", true);
-            }
-        }
-    }
-    
-    private IEnumerator Attack()
-    {
-        punchObject.SetActive(true);
-        _animator.SetBool("chase", false);
-        _currentState = State.Attacking;
-        yield return new WaitForSeconds(1.1f);
-        punchObject.SetActive(false);
-    }
-
-    void FixedUpdate()
-    {
-        if (_currentState == State.Dead)
-            return;
-
-        if (Time.time > _nextAttackTime)
-        {
-            float sqrDistanceToPlayer = (_player.position - transform.position).sqrMagnitude;
-            if (sqrDistanceToPlayer < Mathf.Pow(_attackDistance, 2))
-            {
-                _nextAttackTime = Time.time + _timeBetweenAttacks;
-                transform.LookAt(_player);
-                _animator.SetTrigger("attack");
-                StartCoroutine("Attack");
-            }
-            else
-            {
-                if (_currentState != State.Chasing && smelledPlayer)
-                {
-                    if (_currentState != State.Stunned)
-                    {
-                        _animator.SetBool("chase", true);
-                        _currentState = State.Chasing;
-                    }
-                }
             }
         }
     }
