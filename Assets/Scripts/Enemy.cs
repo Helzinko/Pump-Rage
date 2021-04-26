@@ -31,11 +31,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private Animator _animator;
 
-    private Rigidbody _rigidbody;
-
     public float _health = 3.0f;
-
-    private GameObject _shotgun;
 
     public GameObject splashEffect;
     public GameObject[] decalObjects;
@@ -44,20 +40,13 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private List<Collider> RagdollColliders = new List<Collider>();
     private List<Rigidbody> RagdollRigidbodies = new List<Rigidbody>();
-    
-    public float radius = 100.0f;
-    public float power = 50.0f;
 
     public float xpValue = 10;
-
-    public GameObject spine;
     void Start()
     {
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _player = GameObject.FindGameObjectWithTag("playerBody").transform;
-        _shotgun = GameObject.FindGameObjectWithTag("shotgun");
-        _rigidbody = GetComponent<Rigidbody>();
         punchObject.SetActive(false);
         SetRagdollParts();
     }
@@ -215,12 +204,8 @@ public class Enemy : MonoBehaviour, IDamageable
         GameObject decalGameObject = Instantiate(decalObjects[UnityEngine.Random.Range(0, decalObjects.Length)], decalPosition, decalRotation);
         Destroy(splashParticles, 1f);
         _currentState = State.Dead;
-        //_rigidbody.velocity = Vector3.zero;
-        //_rigidbody.angularVelocity = Vector3.zero;
-        //_rigidbody.isKinematic = true;
-        //GetComponent<Collider>().enabled = false;
         
-        // +xp
+        
         GameObject gameManager = GameObject.FindWithTag("GameController");
         gameManager.GetComponent<ShotgunLevelController>().GetXp(xpValue);
     }

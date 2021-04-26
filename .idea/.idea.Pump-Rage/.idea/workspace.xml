@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="" />
+    <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemySplashEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemySplashEffect.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GreenEnemySplash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GreenEnemySplash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RangeEnemySplash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RangeEnemySplash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerSplash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerSplash.prefab" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +140,7 @@
       <workItem from="1618212423365" duration="6326000" />
       <workItem from="1618591419333" duration="893000" />
       <workItem from="1619362933486" duration="12731000" />
-      <workItem from="1619385237447" duration="7855000" />
+      <workItem from="1619385237447" duration="8536000" />
     </task>
     <servers />
   </component>
