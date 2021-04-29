@@ -18,16 +18,13 @@ public class MeleeEnemy : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         enemyScript = GetComponent<Enemy>();
-        //punchObject.SetActive(false);
         _player = GameObject.FindGameObjectWithTag("playerBody").transform;
     }
     private IEnumerator Attack()
     {
-        //punchObject.SetActive(true);
         _animator.SetBool("chase", false);
         enemyScript._currentState = Enemy.State.Attacking;
         yield return new WaitForSeconds(1.1f);
-        //punchObject.SetActive(false);
     }
 
     void FixedUpdate()

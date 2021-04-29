@@ -4,9 +4,8 @@
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyPunchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyPunchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,15 +57,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/bombEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BombEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MeleeEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyPunchController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MeleeEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ntDYVZPVTq7jtOUuDKlMk9ziOT" />
@@ -150,7 +149,7 @@
       <workItem from="1619547992563" duration="1002000" />
       <workItem from="1619550215585" duration="1161000" />
       <workItem from="1619602858958" duration="2820000" />
-      <workItem from="1619690688314" duration="1385000" />
+      <workItem from="1619690688314" duration="3825000" />
     </task>
     <servers />
   </component>

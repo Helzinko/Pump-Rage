@@ -112,9 +112,13 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         if (_currentState == State.Dead)
             return;
-        
-        _currentState = State.Stunned;
-        _navMeshAgent.enabled = false;
+
+        if (_currentState != State.Attacking)
+        {
+            _currentState = State.Stunned;
+            _navMeshAgent.enabled = false;
+            Invoke("RemoveStun", .1f);
+        }
 
         _health -= damage;
         
@@ -125,7 +129,6 @@ public class Enemy : MonoBehaviour, IDamageable
             return;
         }
         
-        Invoke("RemoveStun", .1f);
         var particlesSpawnVector = new Vector3(transform.position.x, 1f, transform.position.z);
         GameObject splashParticles = Instantiate(splashEffect, particlesSpawnVector, transform.rotation);
         Vector3 decalPosition = new Vector3(transform.position.x, -0.8f, transform.position.z);
