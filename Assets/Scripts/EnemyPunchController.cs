@@ -17,7 +17,6 @@ public class EnemyPunchController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _player.GetComponent<PlayerStateController>().TakeDamage(punchDamage);
-            //gameObject.SetActive(false);
         }
     }
 }

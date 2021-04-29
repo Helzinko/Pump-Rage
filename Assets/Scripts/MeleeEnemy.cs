@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
-    private float _attackDistance = 5f;
+    public float _attackDistance = 5f;
     private float _timeBetweenAttacks = 1;
     private float _nextAttackTime;
     public GameObject punchObject;
@@ -18,16 +18,16 @@ public class MeleeEnemy : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         enemyScript = GetComponent<Enemy>();
-        punchObject.SetActive(false);
+        //punchObject.SetActive(false);
         _player = GameObject.FindGameObjectWithTag("playerBody").transform;
     }
     private IEnumerator Attack()
     {
-        punchObject.SetActive(true);
+        //punchObject.SetActive(true);
         _animator.SetBool("chase", false);
         enemyScript._currentState = Enemy.State.Attacking;
         yield return new WaitForSeconds(1.1f);
-        punchObject.SetActive(false);
+        //punchObject.SetActive(false);
     }
 
     void FixedUpdate()

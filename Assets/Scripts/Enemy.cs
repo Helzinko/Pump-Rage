@@ -150,7 +150,6 @@ public class Enemy : MonoBehaviour, IDamageable
     private void Die()
     {
         GameObject.FindWithTag("GameController").GetComponent<GameManager>().enemyCalculator(1);
-
         _navMeshAgent.enabled = false;
         var particlesSpawnVector = new Vector3(transform.position.x, 1f, transform.position.z);
         GameObject splashParticles = Instantiate(splashEffect, particlesSpawnVector, transform.rotation);
