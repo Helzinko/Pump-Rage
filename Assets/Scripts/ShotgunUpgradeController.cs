@@ -73,18 +73,21 @@ public class ShotgunUpgradeController : MonoBehaviour
         {
             if (!isUpgrading)
             {
-                upgradeTable.alpha = 1f;
-                upgradeTable.blocksRaycasts = true;
+                if (!FindObjectOfType<DialogueManager>().isTalking)
+                {
+                    upgradeTable.alpha = 1f;
+                    upgradeTable.blocksRaycasts = true;
                 
-                crossair.SetActive(false);
-                Cursor.visible = true;
+                    crossair.SetActive(false);
+                    Cursor.visible = true;
 
-                foreach (var disableObject in objectsToDisable) {
-                    disableObject.alpha = 0f;
-                    disableObject.blocksRaycasts = false;
+                    foreach (var disableObject in objectsToDisable) {
+                        disableObject.alpha = 0f;
+                        disableObject.blocksRaycasts = false;
+                    }
+
+                    isUpgrading = true;
                 }
-
-                isUpgrading = true;
             }
             else
             {

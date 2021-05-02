@@ -108,6 +108,11 @@ public class PlayerStateController : MonoBehaviour
             isDead = true;
             GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().RestoreDefault();
             Invoke("ShowDeathText", 2f);
+            
+            if (FindObjectOfType<DialogueManager>().isTalking)
+            {
+                FindObjectOfType<DialogueManager>().EndDialogue();
+            }
         }
 
         healthBarController.GetComponent<HealthBarController>().ChangeBarData(playerHealth);

@@ -16,6 +16,7 @@ TagManager:
   - healthPickup
   - destroy
   - enemyPart
+  - joeNpc
   layers:
   - Default
   - TransparentFX

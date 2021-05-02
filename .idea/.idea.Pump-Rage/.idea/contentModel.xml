@@ -11,6 +11,9 @@
           <e p="Bullet.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="CameraShake.cs" t="Include" />
+          <e p="Dialogue.cs" t="Include" />
+          <e p="DialogueManager.cs" t="Include" />
+          <e p="DialogueTrigger.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyPunchController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />

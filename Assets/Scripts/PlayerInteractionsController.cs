@@ -14,12 +14,15 @@ public class PlayerInteractionsController : MonoBehaviour
     public Animator transition;
 
     public GameObject pickupText;
+    public GameObject startTalkText;
 
     private bool _canPickupUpgrade = false;
     private GameObject _upgradePickupObject;
     
     private bool _canPickupHealth = false;
     private GameObject _healthPickupObject;
+
+    private bool _canStartTalkingWithJoe = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -44,6 +47,12 @@ public class PlayerInteractionsController : MonoBehaviour
             pickupText.SetActive(true);
             _canPickupHealth = true;
             _healthPickupObject = other.gameObject;
+        }
+        
+        else if (other.CompareTag("joeNpc"))
+        {
+            startTalkText.SetActive(true);
+            _canStartTalkingWithJoe = true;
         }
     }
     
@@ -71,6 +80,17 @@ public class PlayerInteractionsController : MonoBehaviour
             _canPickupHealth = false;
             _healthPickupObject = new GameObject("EmptyObject");
         }
+        
+        if (other.CompareTag("joeNpc"))
+        {
+            startTalkText.SetActive(false);
+            _canStartTalkingWithJoe = false;
+
+            if (FindObjectOfType<DialogueManager>().isTalking)
+            {
+                FindObjectOfType<DialogueManager>().EndDialogue();
+            }
+        }
     }
     
     void Update()
@@ -96,6 +116,13 @@ public class PlayerInteractionsController : MonoBehaviour
                 Destroy(_healthPickupObject);
                 _canPickupHealth = false;
                 pickupText.SetActive(false);
+            }
+            
+            else if (_canStartTalkingWithJoe)
+            {
+                _canStartTalkingWithJoe = false;
+                startTalkText.SetActive(false);
+                GameObject.FindGameObjectWithTag("joeNpc").GetComponent<DialogueTrigger>().TriggerDialogue();
             }
         }
     }
