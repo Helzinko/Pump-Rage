@@ -24,14 +24,13 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        dialogHolder.SetActive(true);
+        
         isTalking = true;
 
         npcName.text = dialogue.npcName;
-        
-        dialogHolder.SetActive(true);
-        
+
         crossair.SetActive(false);
-        Cursor.visible = true;
 
         foreach (var disableObject in objectsToDisable) {
             disableObject.alpha = 0f;
@@ -44,8 +43,6 @@ public class DialogueManager : MonoBehaviour
         {
             _sentences.Enqueue(sentence);
         }
-
-        DisplayNextSentence();
     }
 
     private void DisplayNextSentence()
@@ -67,7 +64,6 @@ public class DialogueManager : MonoBehaviour
         dialogHolder.SetActive(false);
         
         crossair.SetActive(true);
-        Cursor.visible = false;
 
         foreach (var disableObject in objectsToDisable) {
             disableObject.alpha = 1f;

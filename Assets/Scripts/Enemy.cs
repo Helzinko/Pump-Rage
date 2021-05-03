@@ -35,12 +35,15 @@ public class Enemy : MonoBehaviour, IDamageable
     private List<Collider> RagdollColliders = new List<Collider>();
     private List<Rigidbody> RagdollRigidbodies = new List<Rigidbody>();
 
+    private NavMeshPath _navMeshPath;
+
     public float xpValue = 10;
     void Start()
     {
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _player = GameObject.FindGameObjectWithTag("playerBody").transform;
+        _navMeshPath = new NavMeshPath();
         SetRagdollParts();
     }
 
@@ -89,9 +92,6 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (_currentState == State.Dead)
-            return;
-        
         if (_currentState == State.Chasing)
         {
             _navMeshAgent.SetDestination(_player.position);
