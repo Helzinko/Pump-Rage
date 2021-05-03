@@ -33,6 +33,8 @@ public class ShotgunController : MonoBehaviour
     public int _maxBulletCount = 7;
 
     public AudioSource shotSound;
+    public AudioSource reloadSound;
+    public AudioSource emptyShot;
 
     public GameObject gameManager;
 
@@ -57,33 +59,46 @@ public class ShotgunController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead)
         {
-            // reload animation
+            if (currentBulletsCount != _maxBulletCount)
+            {
+                // reload animation
             
-            //
-            currentBulletsCount = _maxBulletCount;
-            gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
-            GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
+                reloadSound.Play();
+            
+                //
+                currentBulletsCount = _maxBulletCount;
+                gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
+                GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
+            }
         }
     }
 
     private void Shoot()
     {
-        if (Time.time > _nextFireTime && currentBulletsCount > 0)
+        if (Time.time > _nextFireTime)
         {
-            multipleShot = false;
-            StartCoroutine(cameraShake.Shake(.15f, .1f));
-            _nextFireTime = Time.time + timeBetweenFire / 1000;
+            if (currentBulletsCount > 0)
+            {
+                multipleShot = false;
+                StartCoroutine(cameraShake.Shake(.15f, .1f));
+                _nextFireTime = Time.time + timeBetweenFire / 1000;
 
-            TripleShoot();
+                TripleShoot();
     
-            _muzzleFlash.Activate();
-            Instantiate(shell, shellSpawn.position, shellSpawn.rotation);
+                _muzzleFlash.Activate();
+                Instantiate(shell, shellSpawn.position, shellSpawn.rotation);
             
-            _animator.SetTrigger("shoot");
-            currentBulletsCount--;
-            gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
-            GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
-            shotSound.Play();
+                _animator.SetTrigger("shoot");
+                currentBulletsCount--;
+                gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
+                GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
+                shotSound.Play();
+            }
+            else
+            {            
+                emptyShot.Play();
+                _nextFireTime = Time.time + timeBetweenFire / 1000;
+            }
         }
     }
 

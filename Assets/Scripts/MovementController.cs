@@ -30,6 +30,10 @@ public class MovementController : MonoBehaviour
     public bool isDashing = false;
 
     private PlayerStateController stateController;
+
+    public AudioSource walkingSound;
+
+    private bool _walkingSoundActivated = false;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -56,6 +60,8 @@ public class MovementController : MonoBehaviour
         isDashing = true;
         _animator.SetTrigger("Roll");
         Invoke("RemoveDashForce", 0.4665f);
+        walkingSound.Stop();
+        _walkingSoundActivated = false;
     }
 
     void Update()
@@ -122,6 +128,26 @@ public class MovementController : MonoBehaviour
             }
         }
         
+        if (_playerVelocity != Vector3.zero)
+        {
+            if (!stateController.isDead)
+            {
+                if (!isDashing)
+                {
+                    if (!_walkingSoundActivated)
+                    {
+                        walkingSound.Play();
+                        _walkingSoundActivated = true;
+                    }
+                }
+            }
+        }
+        else
+        {
+            walkingSound.Stop();
+            _walkingSoundActivated = false;
+        }
+
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
 
@@ -166,7 +192,7 @@ public class MovementController : MonoBehaviour
         }
 
         this._moveInput = move;
-
+        
         ConvertMoveInput();
         UpdateAnimator();
     }

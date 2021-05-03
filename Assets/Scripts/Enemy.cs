@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour, IDamageable
     private NavMeshPath _navMeshPath;
 
     public float xpValue = 10;
+
+    public AudioSource zombieRoarSound;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -102,6 +104,7 @@ public class Enemy : MonoBehaviour, IDamageable
             if (_currentState != State.Stunned)
             {
                 smelledPlayer = true;
+                zombieRoarSound.Play();
                 _currentState = State.Chasing;
                 _animator.SetBool("chase", true);
             }

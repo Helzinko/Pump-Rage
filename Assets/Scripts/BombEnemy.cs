@@ -13,6 +13,8 @@ public class BombEnemy : MonoBehaviour
     public GameObject splashEffect;
 
     private GameObject _playerScript;
+
+    public AudioSource explodeSound;
     void Start()
     {
         enemyScript = GetComponent<Enemy>();
@@ -24,10 +26,11 @@ public class BombEnemy : MonoBehaviour
     {
         if (enemyScript._currentState == Enemy.State.Dead)
             return;
-
+        
         float sqrDistanceToPlayer = (_player.position - transform.position).sqrMagnitude;
         if (sqrDistanceToPlayer < Mathf.Pow(_attackDistance, 2))
         {
+            explodeSound.Play();
             GameObject.FindWithTag("GameController").GetComponent<GameManager>().enemyCalculator(1);
             var particlesSpawnVector = new Vector3(transform.position.x, 1f, transform.position.z);
             GameObject splashParticles = Instantiate(splashEffect, particlesSpawnVector, transform.rotation);
