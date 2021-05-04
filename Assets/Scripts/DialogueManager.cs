@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
 
     public TMP_Text npcName;
     public TMP_Text dialogueText;
+
+    public AudioSource talkingSound;
     
     void Start()
     {
@@ -47,6 +49,7 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayNextSentence()
     {
+        talkingSound.Stop();
         if (_sentences.Count == 0)
         {
             EndDialogue();
@@ -73,12 +76,14 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
+        talkingSound.Play();
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
         }
+        talkingSound.Stop();
     }
 
     private void Update()

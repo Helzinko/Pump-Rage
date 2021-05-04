@@ -24,6 +24,8 @@ public class PlayerInteractionsController : MonoBehaviour
 
     private bool _canStartTalkingWithJoe = false;
 
+    public AudioSource openDoorSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("exit"))
@@ -99,6 +101,8 @@ public class PlayerInteractionsController : MonoBehaviour
         {
             if (_canExit)
             {
+                _canExit = false;
+                openDoorSound.Play();
                 StartCoroutine(LoadLevel(0));
             }
 

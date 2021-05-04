@@ -24,6 +24,9 @@ public class PlayerStateController : MonoBehaviour
     
     private List<Collider> RagdollColliders = new List<Collider>();
     private List<Rigidbody> RagdollRigidbodies = new List<Rigidbody>();
+
+    public AudioSource gettingDamageSound;
+    public AudioSource dieSound;
     
     private void Start()
     {
@@ -99,11 +102,14 @@ public class PlayerStateController : MonoBehaviour
         if (isDead)
             return;
         
+        gettingDamageSound.Play();
+        
         playerHealth -= damageAmount;
         GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetPlayerHealth(playerHealth);
         
         if (playerHealth <= 0)
         {
+            dieSound.Play();
             TurnOnRagdoll();
             isDead = true;
             GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().RestoreDefault();

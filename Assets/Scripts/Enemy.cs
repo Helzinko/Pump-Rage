@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public float xpValue = 10;
 
     public AudioSource zombieRoarSound;
+    public AudioSource hurtEffect;
+    public AudioSource dieSound;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -132,6 +134,8 @@ public class Enemy : MonoBehaviour, IDamageable
             return;
         }
         
+        hurtEffect.Play();
+        
         var particlesSpawnVector = new Vector3(transform.position.x, 1f, transform.position.z);
         GameObject splashParticles = Instantiate(splashEffect, particlesSpawnVector, transform.rotation);
         Vector3 decalPosition = new Vector3(transform.position.x, -0.8f, transform.position.z);
@@ -155,6 +159,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Die()
     {
+        var dieSoundHolder = Instantiate(dieSound, transform);
+        dieSoundHolder.transform.parent = null;
+        
         GameObject.FindWithTag("GameController").GetComponent<GameManager>().enemyCalculator(1);
         _navMeshAgent.enabled = false;
         var particlesSpawnVector = new Vector3(transform.position.x, 1f, transform.position.z);
