@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BombEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BombEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +52,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SoundtrackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Variables.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/bombEnemy.cs" />
@@ -74,6 +69,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/BombEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" />
     </changedPaths>
   </component>
@@ -163,7 +159,8 @@
       <workItem from="1619984048956" duration="5199000" />
       <workItem from="1620028636385" duration="1817000" />
       <workItem from="1620055973137" duration="5964000" />
-      <workItem from="1620120946242" duration="5141000" />
+      <workItem from="1620120946242" duration="5667000" />
+      <workItem from="1620143903859" duration="1060000" />
     </task>
     <servers />
   </component>

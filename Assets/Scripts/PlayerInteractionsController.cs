@@ -25,6 +25,9 @@ public class PlayerInteractionsController : MonoBehaviour
     private bool _canStartTalkingWithJoe = false;
 
     public AudioSource openDoorSound;
+    
+    public AudioSource levelUpSound;
+    public AudioSource healthUpSound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -108,6 +111,7 @@ public class PlayerInteractionsController : MonoBehaviour
 
             else if (_canPickupUpgrade)
             {
+                levelUpSound.Play();
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<ShotgunLevelController>().AddUpgradePoint();
                 Destroy(_upgradePickupObject);
                 pickupText.SetActive(false);
@@ -116,6 +120,7 @@ public class PlayerInteractionsController : MonoBehaviour
             
             else if (_canPickupHealth)
             {
+                healthUpSound.Play();
                 GetComponent<PlayerStateController>().AddHealth(10);
                 Destroy(_healthPickupObject);
                 _canPickupHealth = false;

@@ -12,6 +12,8 @@ public class ShotgunLevelController : MonoBehaviour
 
     public GameObject upgradeAddedText;
 
+    public AudioSource levelUpSound;
+
     private void Start()
     {
         GetComponent<ShotgunBarController>().ChangeLevelBarValue(currentXp/_nextLevelXp);
@@ -39,6 +41,7 @@ public class ShotgunLevelController : MonoBehaviour
 
     private void LevelUp()
     {
+        levelUpSound.Play();
         currentXp = currentXp - _nextLevelXp;
         currentLevel++;
         _nextLevelXp += _nextLevelXp / 10;
