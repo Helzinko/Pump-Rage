@@ -16,6 +16,8 @@ public class RangeEnemy : MonoBehaviour
     public Spit spit;
     public Transform spitSpawn;
 
+    public AudioSource spitSound;
+
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -28,7 +30,7 @@ public class RangeEnemy : MonoBehaviour
         enemyScript._navMeshAgent.isStopped = true;
         _animator.SetBool("chase", false);
         enemyScript._currentState = Enemy.State.Attacking;
-
+        
         Spit newSpit = Instantiate(spit, spitSpawn.position, spitSpawn.rotation);
         newSpit.SetSpitSpeed(70f);
 
@@ -58,6 +60,7 @@ public class RangeEnemy : MonoBehaviour
                 {
                     if (hit.transform.CompareTag("Player"))
                     {
+                        spitSound.Play();
                         _nextAttackTime = Time.time + _timeBetweenAttacks;
                         _animator.SetTrigger("attack");
                         StartCoroutine("Attack");

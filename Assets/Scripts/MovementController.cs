@@ -32,6 +32,7 @@ public class MovementController : MonoBehaviour
     private PlayerStateController stateController;
 
     public AudioSource walkingSound;
+    public AudioSource dashSound;
 
     private bool _walkingSoundActivated = false;
     void Start()
@@ -55,6 +56,7 @@ public class MovementController : MonoBehaviour
 
     void Dash(Vector3 force)
     {
+        dashSound.Play();
         _rigidbody.AddForce(force * 1200f * Time.fixedDeltaTime, ForceMode.VelocityChange);
         _rigidbody.drag = 0;
         isDashing = true;
