@@ -38,6 +38,8 @@ public class ShotgunController : MonoBehaviour
 
     public GameObject gameManager;
 
+    private bool _isReloading = false;
+
     private void Start()
     {
         currentBulletsCount = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>()
@@ -52,15 +54,17 @@ public class ShotgunController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead)
+        if (Input.GetMouseButton(0) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead && !_isReloading)
         {
             Shoot();
         }
 
         if (Input.GetKeyDown(KeyCode.R) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead)
         {
-            if (currentBulletsCount != _maxBulletCount)
+            if (currentBulletsCount != _maxBulletCount && !_isReloading)
             {
+                _isReloading = true;
+                
                 // reload animation
             
                 reloadSound.Play();
@@ -69,8 +73,15 @@ public class ShotgunController : MonoBehaviour
                 currentBulletsCount = _maxBulletCount;
                 gameManager.GetComponent<ShotgunBarController>().ChangeBulletsText(currentBulletsCount);
                 GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().SetCurrentBulletCount(currentBulletsCount);
+                
+                Invoke("EndReloading", 0.75f);
             }
         }
+    }
+
+    private void EndReloading()
+    {
+        _isReloading = false;
     }
 
     private void Shoot()
