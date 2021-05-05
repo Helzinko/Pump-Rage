@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         {
             if (_stateController.isDead)
             {
-                StartCoroutine(_player.GetComponent<PlayerInteractionsController>().LoadLevel(0));
+                StartCoroutine(_player.GetComponent<PlayerInteractionsController>().RestartGame(0));
             }
         }
 

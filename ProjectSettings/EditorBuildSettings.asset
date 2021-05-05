@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/demo_level_1.unity
     guid: 7907c35dec626024e869bb6fbc94f7d3
+  - enabled: 1
+    path: Assets/Scenes/demo_level_boss.unity
+    guid: 0ec7c1870ec861b4685c72afdebdf037
   m_configObjects: {}

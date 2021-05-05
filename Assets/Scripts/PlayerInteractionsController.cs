@@ -142,6 +142,15 @@ public class PlayerInteractionsController : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    
+    public IEnumerator RestartGame(int levelIndex)
+    {
+        transition.SetTrigger("end");
+
+        yield return new WaitForSeconds(1f);
+        
+        SceneManager.LoadScene(0);
     }
 }
