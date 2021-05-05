@@ -16,6 +16,7 @@
           <e p="DialogueTrigger.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyPunchController.cs" t="Include" />
+          <e p="FirstBossController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="HealthBarController.cs" t="Include" />
           <e p="IDamageable.cs" t="Include" />

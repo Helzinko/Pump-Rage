@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 
 public class DialogueManager : MonoBehaviour
 {
-    private Queue<string> _sentences;
+    private String[] _sentences;
     public bool isTalking = false;
     public GameObject dialogHolder;
     
@@ -18,14 +18,15 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
 
     public AudioSource talkingSound;
-    
-    void Start()
-    {
-        _sentences = new Queue<string>();
-    }
+
+    private int _arrayLenght = 0;
+    private int _currentSentence = 0;
 
     public void StartDialogue(Dialogue dialogue)
     {
+        _currentSentence = 0;
+        _sentences = new String[10];
+        
         dialogHolder.SetActive(true);
         
         isTalking = true;
@@ -39,24 +40,27 @@ public class DialogueManager : MonoBehaviour
             disableObject.blocksRaycasts = false;
         }
 
-        _sentences.Clear();
-
-        foreach (string sentence in dialogue.sentences)
+        for (int i = 0; i < dialogue.sentences.Length; i++)
         {
-            _sentences.Enqueue(sentence);
+            _sentences[i] = dialogue.sentences[i];
+            _arrayLenght = i;
         }
+
+        DisplayNextSentence();
     }
 
     private void DisplayNextSentence()
     {
         talkingSound.Stop();
-        if (_sentences.Count == 0)
+        
+        if (_currentSentence > _arrayLenght)
         {
             EndDialogue();
             return;
         }
 
-        string sentence = _sentences.Dequeue();
+        string sentence = _sentences[_currentSentence];
+        _currentSentence++;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
@@ -90,7 +94,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (isTalking)
+            if (isTalking && _currentSentence != 0)
             {
                 DisplayNextSentence();
             }

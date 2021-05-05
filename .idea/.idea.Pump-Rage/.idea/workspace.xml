@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Variables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Variables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/1_boss/Mutant Swiping.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/1_boss/Mutant Swiping.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/1_boss/Standing Melee Attack 360 High.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/1_boss/Standing Melee Attack 360 High.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/1_boss_controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/1_boss_controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +68,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Variables.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FirstBossController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ntDYVZPVTq7jtOUuDKlMk9ziOT" />
@@ -162,7 +166,7 @@
       <workItem from="1620055973137" duration="5964000" />
       <workItem from="1620120946242" duration="5667000" />
       <workItem from="1620143903859" duration="1060000" />
-      <workItem from="1620200276468" duration="5232000" />
+      <workItem from="1620200276468" duration="14843000" />
     </task>
     <servers />
   </component>

@@ -54,7 +54,7 @@ public class ShotgunController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead && !_isReloading)
+        if (Input.GetMouseButton(0) && !_player.GetComponent<MovementController>().isDashing && !_stateController.isDead && !_isReloading && !FindObjectOfType<ShotgunUpgradeController>().isUpgrading)
         {
             Shoot();
         }
