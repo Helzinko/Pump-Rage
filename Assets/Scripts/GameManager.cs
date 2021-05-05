@@ -32,8 +32,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (_stateController.isDead){}
+            if (_stateController.isDead)
+            {
                 StartCoroutine(_player.GetComponent<PlayerInteractionsController>().LoadLevel(0));
+            }
         }
 
     }

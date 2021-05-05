@@ -44,6 +44,8 @@ public class Variables : MonoBehaviour
         currentBulletRangeLevel = 0; 
         currentBulletDamageLevel = 0;
         currentBulletCountLevel = 0;
+
+        currentScore = 0;
     }
 
     public float GetPlayerHealth()

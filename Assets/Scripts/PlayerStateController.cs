@@ -27,6 +27,9 @@ public class PlayerStateController : MonoBehaviour
 
     public AudioSource gettingDamageSound;
     public AudioSource dieSound;
+
+    private int _currentScoreTemp;
+    private int _highscoreTemp;
     
     private void Start()
     {
@@ -81,20 +84,8 @@ public class PlayerStateController : MonoBehaviour
     private void ShowDeathText()
     {
         deathText.SetActive(true);
-
-        int currentScore = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentScore();
-        
-        scoreText.text = "Neutralized infected persons: <color=red>" + currentScore + "</color>";
-
-        int highscore = PlayerPrefs.GetInt("highScore", 0);
-
-        if (currentScore > highscore)
-        {
-            highscore = currentScore;
-            PlayerPrefs.SetInt("highScore", highscore);
-        }
-        
-        highScoreText.text = "Highscore: <color=red>" + highscore + "</color>";
+        scoreText.text = "Neutralized infected persons: <color=red>" + _currentScoreTemp + "</color>";
+        highScoreText.text = "Highscore: <color=red>" + _highscoreTemp + "</color>";
     }
 
     public void TakeDamage(float damageAmount)
@@ -109,6 +100,15 @@ public class PlayerStateController : MonoBehaviour
         
         if (playerHealth <= 0)
         {
+            _currentScoreTemp = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentScore();
+            _highscoreTemp = PlayerPrefs.GetInt("highScore", 0);
+            
+            if (_currentScoreTemp > _highscoreTemp)
+            {
+                _highscoreTemp = _currentScoreTemp;
+                PlayerPrefs.SetInt("highScore", _highscoreTemp);
+            }
+            
             dieSound.Play();
             TurnOnRagdoll();
             isDead = true;
