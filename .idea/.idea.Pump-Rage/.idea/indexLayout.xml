@@ -33,6 +33,7 @@
       <Path>Logs</Path>
       <Path>Recordings</Path>
       <Path>Temp</Path>
+      <Path>Test</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

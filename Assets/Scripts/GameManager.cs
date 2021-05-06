@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,8 +25,12 @@ public class GameManager : MonoBehaviour
 
         _player = GameObject.FindGameObjectWithTag("Player");
         _stateController = _player.GetComponent<PlayerStateController>();
+
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         
-        GameObject.FindGameObjectWithTag("soundtrack").GetComponent<SoundtrackController>().PlayMusic();
+        if(currentSceneIndex != 0)
+            GameObject.FindGameObjectWithTag("soundtrack").GetComponent<SoundtrackController>().PlayMusic();
+        else GameObject.FindGameObjectWithTag("soundtrack").GetComponent<SoundtrackController>().StopMusic();
     }
 
     private void Update()

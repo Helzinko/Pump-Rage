@@ -21,6 +21,7 @@
           <e p="HealthBarController.cs" t="Include" />
           <e p="IDamageable.cs" t="Include" />
           <e p="MeleeEnemy.cs" t="Include" />
+          <e p="MenuController.cs" t="Include" />
           <e p="MovementController.cs" t="Include" />
           <e p="MuzzleFlash.cs" t="Include" />
           <e p="PlayerInteractionsController.cs" t="Include" />

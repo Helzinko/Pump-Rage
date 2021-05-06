@@ -7,6 +7,8 @@
      {
          DontDestroyOnLoad(transform.gameObject);
          _audioSource = GetComponent<AudioSource>();
+         
+         
      }
  
      public void PlayMusic()

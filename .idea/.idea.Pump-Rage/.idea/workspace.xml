@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05650525-9bdd-4ca7-9642-a76d37b340f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pump-Rage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/MachineGunk-nyqg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/MachineGunk-nyqg SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Global Volume Profile 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Global Volume Profile 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/demo_level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/demo_level_boss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/demo_level_boss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundtrackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundtrackController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recordings/upgrade_UI.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Recordings/upgrade_UI.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Test.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +58,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/BulletSpawnRotation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MiniCube.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunBarController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SoundtrackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/bombEnemy.cs" />
@@ -62,12 +73,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunLevelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RangeEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Variables.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShotgunController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FirstBossController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SoundtrackController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInteractionsController.cs" />
     </changedPaths>
   </component>
@@ -86,6 +99,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Test\Pump-Rage.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\manta\OneDrive\Stalinis kompiuteris\RagePump\Pump-Rage\Test" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -159,7 +180,8 @@
       <workItem from="1620055973137" duration="5964000" />
       <workItem from="1620120946242" duration="5667000" />
       <workItem from="1620143903859" duration="1060000" />
-      <workItem from="1620200276468" duration="15174000" />
+      <workItem from="1620200276468" duration="15594000" />
+      <workItem from="1620301686443" duration="1786000" />
     </task>
     <servers />
   </component>
