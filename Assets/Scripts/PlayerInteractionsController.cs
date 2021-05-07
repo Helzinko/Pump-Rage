@@ -100,6 +100,13 @@ public class PlayerInteractionsController : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 2)
+                SceneManager.LoadScene(0);
+            else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (_canExit)

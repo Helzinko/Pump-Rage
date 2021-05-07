@@ -693,7 +693,7 @@ MonoBehaviour:
   _currentState: 0
   _navMeshAgent: {fileID: 0}
   smelledPlayer: 0
-  _health: 35
+  _health: 20
   splashEffect: {fileID: 6811663850715066433, guid: 3ffd92080359459498b113464a2a8755,
     type: 3}
   decalObjects:
@@ -738,7 +738,8 @@ AudioSource:
   m_GameObject: {fileID: 2831723016607618362}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3221e699dfc7d464fb69a77be920024b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: e3fdc17405ae56442986b84ba1d57f65, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
@@ -834,7 +835,8 @@ AudioSource:
   m_GameObject: {fileID: 2831723016607618362}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3221e699dfc7d464fb69a77be920024b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: e339d40adffaace4e92eff9cee765310, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1

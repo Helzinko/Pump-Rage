@@ -25,12 +25,8 @@ public class GameManager : MonoBehaviour
 
         _player = GameObject.FindGameObjectWithTag("Player");
         _stateController = _player.GetComponent<PlayerStateController>();
-
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         
-        if(currentSceneIndex != 0)
-            GameObject.FindGameObjectWithTag("soundtrack").GetComponent<SoundtrackController>().PlayMusic();
-        else GameObject.FindGameObjectWithTag("soundtrack").GetComponent<SoundtrackController>().StopMusic();
+        GameObject.FindGameObjectWithTag("soundtrack").GetComponent<SoundtrackController>().PlayMusic();
     }
 
     private void Update()
