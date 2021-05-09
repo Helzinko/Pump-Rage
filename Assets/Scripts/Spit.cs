@@ -6,7 +6,7 @@ public class Spit : MonoBehaviour
 {
     private float _speed = 10;
     public LayerMask collisionMask;
-    private float _damage = 20;
+    private float _damage = 10;
     public GameObject spitSplashEffect;
 
     public void SetSpitSpeed(float speed)

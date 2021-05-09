@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/demo_level_1.unity
     guid: 7907c35dec626024e869bb6fbc94f7d3
   - enabled: 1
+    path: Assets/Scenes/demo_level_2.unity
+    guid: 92b41d15a317d8545806a5427f2a8c9b
+  - enabled: 1
+    path: Assets/Scenes/demo_level_3.unity
+    guid: 5bfa409183553394fa6b2921ef7b0eb5
+  - enabled: 1
+    path: Assets/Scenes/demo_level_4.unity
+    guid: 6b8af502145bbcb44ae9107ec0b52bac
+  - enabled: 1
     path: Assets/Scenes/demo_level_boss.unity
     guid: 0ec7c1870ec861b4685c72afdebdf037
   m_configObjects: {}

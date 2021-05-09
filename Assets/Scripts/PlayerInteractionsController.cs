@@ -149,7 +149,7 @@ public class PlayerInteractionsController : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 5)
             SceneManager.LoadScene(0);
         else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

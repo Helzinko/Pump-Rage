@@ -17985,6 +17985,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 1158433181312120650, guid: d9663fa15424b3749b68d2bb143f1521,
         type: 3}
+      propertyPath: _health
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158433181312120650, guid: d9663fa15424b3749b68d2bb143f1521,
+        type: 3}
       propertyPath: fillImage
       value: 
       objectReference: {fileID: 1005447465}
