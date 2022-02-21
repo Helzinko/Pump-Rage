@@ -42,9 +42,11 @@ public class ShotgunController : MonoBehaviour
 
     private void Start()
     {
-        currentBulletsCount = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>()
-            .GetCurrentBulletCount();
-        
+        //currentBulletsCount = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>()
+        //    .GetCurrentBulletCount();
+
+        currentBulletsCount = 7;
+
         _animator = GetComponent<Animator>();
         _player = GameObject.FindGameObjectWithTag("Player");
         _muzzleFlash = GetComponent<MuzzleFlash>();
@@ -91,7 +93,7 @@ public class ShotgunController : MonoBehaviour
             if (currentBulletsCount > 0)
             {
                 multipleShot = false;
-                StartCoroutine(cameraShake.Shake(.15f, .1f));
+                //StartCoroutine(cameraShake.Shake(.15f, .1f));
                 _nextFireTime = Time.time + timeBetweenFire / 1000;
 
                 TripleShoot();

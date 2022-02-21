@@ -32,34 +32,34 @@ public class ShotgunUpgradeController : MonoBehaviour
     private int _bulletCountLevel = 0;
     public TMP_Text bulletCountLevelText;
 
-    private void Start()
-    {
-        upgradeTable.alpha = 0f;
-        upgradeTable.blocksRaycasts = false;
+    //private void Start()
+    //{
+    //    upgradeTable.alpha = 0f;
+    //    upgradeTable.blocksRaycasts = false;
         
-        _upgradePoints = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentUpgradePoints();
-        _bulletRangeLevel = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetBulletRangeLevel();
-        _bulletDamageLevel = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentBulletDamageLevel();
-        _bulletCountLevel = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentBulletCountLevel();
+    //    _upgradePoints = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentUpgradePoints();
+    //    _bulletRangeLevel = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetBulletRangeLevel();
+    //    _bulletDamageLevel = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentBulletDamageLevel();
+    //    _bulletCountLevel = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetCurrentBulletCountLevel();
 
-        bulletRangeLevelText.text = _bulletRangeLevel.ToString();
-        bulletDamageLevelText.text = _bulletDamageLevel.ToString();
-        bulletCountLevelText.text = _bulletCountLevel.ToString();
-        upgradePointsText.text = _upgradePoints.ToString();
+    //    bulletRangeLevelText.text = _bulletRangeLevel.ToString();
+    //    bulletDamageLevelText.text = _bulletDamageLevel.ToString();
+    //    bulletCountLevelText.text = _bulletCountLevel.ToString();
+    //    upgradePointsText.text = _upgradePoints.ToString();
         
-        for(int i = 0; i < _bulletRangeLevel; i++)
-            bulletLifeTime += 0.02f;
+    //    for(int i = 0; i < _bulletRangeLevel; i++)
+    //        bulletLifeTime += 0.02f;
         
-        for(int i = 0; i < _bulletDamageLevel; i++)
-            bulletDamage += 0.5f;
+    //    for(int i = 0; i < _bulletDamageLevel; i++)
+    //        bulletDamage += 0.5f;
         
-        for(int i = 0; i < _bulletCountLevel; i++)
-        {
-            GetComponent<ShotgunBarController>().shotgun.GetComponent<ShotgunController>()._maxBulletCount++;
-            GetComponent<ShotgunBarController>().ChangeBulletsText(GetComponent<ShotgunBarController>().shotgun.GetComponent<ShotgunController>().currentBulletsCount);
-        }
+    //    for(int i = 0; i < _bulletCountLevel; i++)
+    //    {
+    //        GetComponent<ShotgunBarController>().shotgun.GetComponent<ShotgunController>()._maxBulletCount++;
+    //        GetComponent<ShotgunBarController>().ChangeBulletsText(GetComponent<ShotgunBarController>().shotgun.GetComponent<ShotgunController>().currentBulletsCount);
+    //    }
 
-    }
+    //}
 
     public void ExitUpgradeBtn()
     {
@@ -122,14 +122,14 @@ public class ShotgunUpgradeController : MonoBehaviour
 
     public void AddExperiencePoints(float amount)
     {
-        _currentXp = amount;
-        experiencePointsFillImage.fillAmount = _currentXp;
+        //_currentXp = amount;
+        //experiencePointsFillImage.fillAmount = _currentXp;
     }
 
     public void AddLevel(int currentLevel)
     {
         _currentLevel = currentLevel;
-        currentLevelText.text = _currentLevel.ToString();
+        //currentLevelText.text = _currentLevel.ToString();
     }
 
     

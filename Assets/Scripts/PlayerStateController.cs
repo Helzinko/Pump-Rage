@@ -21,9 +21,6 @@ public class PlayerStateController : MonoBehaviour
     public TMP_Text highScoreText;
 
     public GameObject healthAddedText;
-    
-    private List<Collider> RagdollColliders = new List<Collider>();
-    private List<Rigidbody> RagdollRigidbodies = new List<Rigidbody>();
 
     public AudioSource gettingDamageSound;
     public AudioSource dieSound;
@@ -34,52 +31,12 @@ public class PlayerStateController : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        playerHealth = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetPlayerHealth();
-        healthBarController.GetComponent<HealthBarController>().ChangeBarData(playerHealth);
-        
-        SetRagdollParts();
+        //playerHealth = GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().GetPlayerHealth();
+        playerHealth = 10;
+        //healthBarController.GetComponent<HealthBarController>().ChangeBarData(playerHealth);
+       
     }
-    
-    private void SetRagdollParts()
-    {
-        Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
-        Rigidbody[] rigidbodies = gameObject.GetComponentsInChildren<Rigidbody>();
-
-        foreach (Collider c in colliders)
-        {
-            if (c.gameObject != this.gameObject)
-            {
-                c.gameObject.layer = 16;
-                c.isTrigger = true;
-                RagdollColliders.Add(c);
-            }
-        }
-        
-        foreach (Rigidbody c in rigidbodies)
-        {
-            if (c.gameObject != this.gameObject)
-            {
-                c.isKinematic = true;
-                RagdollRigidbodies.Add(c);
-            }
-        }
-    }
-    
-    private void TurnOnRagdoll()
-    {
-        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        _animator.enabled = false;
-        
-        foreach (Rigidbody c in RagdollRigidbodies)
-        {
-            c.isKinematic = false;
-        }
-        
-        foreach (Collider c in RagdollColliders)
-        {
-            c.isTrigger = false;
-        }
-    }
+ 
 
     private void ShowDeathText()
     {
@@ -110,7 +67,6 @@ public class PlayerStateController : MonoBehaviour
             }
             
             dieSound.Play();
-            TurnOnRagdoll();
             isDead = true;
             GameObject.FindGameObjectWithTag("variables").GetComponent<Variables>().RestoreDefault();
             Invoke("ShowDeathText", 2f);

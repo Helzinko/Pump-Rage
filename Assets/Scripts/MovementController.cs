@@ -183,7 +183,8 @@ public class MovementController : MonoBehaviour
         
         if(!isDashing && !stateController.isDead)
             transform.LookAt(lookPoint);
-        crosshair.transform.position = point;
+
+        //crosshair.transform.position = point;
     }
 
     private void Move(Vector3 move)
