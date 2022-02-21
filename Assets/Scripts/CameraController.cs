@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
         _offset = transform.position - _player.transform.position;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         var position = transform.position;
         var followPoint = new Vector3(_player.transform.position.x+_offset.x, position.y, _player.transform.position.z+_offset.z);

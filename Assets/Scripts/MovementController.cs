@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class MovementController : MonoBehaviour
 {
-    public float movementSpeed = 5;
     private Vector3 _velocity;
     private Rigidbody _rigidbody;
     private Vector3 _playerVelocity;
@@ -34,102 +32,30 @@ public class MovementController : MonoBehaviour
     public AudioSource walkingSound;
     public AudioSource dashSound;
 
+    private CharacterController _controller;
+    public float _playerMovementSpeed = 5;
+
+    private Vector3 inputVector;
+
     private bool _walkingSoundActivated = false;
     void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
         _camera = Camera.main;
         _groundObject = new Plane(Vector3.up, Vector3.up * shotgun.transform.position.y);
 
         _animator = GetComponent<Animator>();
         _cam = _camera.transform;
         stateController = GetComponent<PlayerStateController>();
-    }
 
-    void RemoveDashForce()
-    {
-        _rigidbody.drag = 50f;
-        _rigidbody.velocity = Vector3.zero;
-        _rigidbody.angularVelocity = Vector3.zero;
-        isDashing = false;
-    }
-
-    void Dash(Vector3 force)
-    {
-        dashSound.Play();
-        _rigidbody.AddForce(force * 1200f * Time.fixedDeltaTime, ForceMode.VelocityChange);
-        _rigidbody.drag = 0;
-        isDashing = true;
-        _animator.SetTrigger("Roll");
-        Invoke("RemoveDashForce", 0.4665f);
-        walkingSound.Stop();
-        _walkingSoundActivated = false;
+        inputVector = Vector2.zero;
+        _controller = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        if (!isDashing && !stateController.isDead)
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    if (Input.GetKey(KeyCode.D))
-                    {
-                        transform.rotation = Quaternion.AngleAxis(45, Vector3.up);
-                        Dash(new Vector3(0.75f, 0, 0.75f));
-                    }
-                    else if (Input.GetKey(KeyCode.A))
-                    {
-                        transform.rotation = Quaternion.AngleAxis(-45, Vector3.up);
-                        Dash(new Vector3(-0.75f, 0, 0.75f));
-                    }
-                    else
-                    {
-                        transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
-                        Dash(Vector3.forward);
-                    }
-                }
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    if (Input.GetKey(KeyCode.D))
-                    {
-                        transform.rotation = Quaternion.AngleAxis(135, Vector3.up);
-                        Dash(new Vector3(0.75f, 0, -0.75f));
-                    }
-                    else if (Input.GetKey(KeyCode.A))
-                    {
-                        transform.rotation = Quaternion.AngleAxis(225, Vector3.up);
-                        Dash(new Vector3(-0.75f, 0, -0.75f));
-                    }
-                    else
-                    {
-                        transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
-                        Dash(Vector3.back);
-                    }
-                }
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    transform.rotation = Quaternion.AngleAxis(90, Vector3.up);
-                    Dash(Vector3.right);
-                }
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    transform.rotation = Quaternion.AngleAxis(-90, Vector3.up);
-                    Dash(Vector3.left);
-                }
-            }
-        }
-        
+        inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        _controller.SimpleMove(inputVector * _playerMovementSpeed);
+
         if (_playerVelocity != Vector3.zero)
         {
             if (!stateController.isDead)
@@ -172,7 +98,7 @@ public class MovementController : MonoBehaviour
             Move(_move);
         
         _playerVelocity = (new Vector3(horizontal, 
-            0, vertical)).normalized * movementSpeed;
+            0, vertical)).normalized * _playerMovementSpeed;
 
         var ray = _camera.ScreenPointToRay(Input.mousePosition);
 
@@ -215,7 +141,7 @@ public class MovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!isDashing && !stateController.isDead)
-            _rigidbody.MovePosition(_rigidbody.position + _playerVelocity * Time.fixedDeltaTime);
+        //if(!isDashing && !stateController.isDead)
+        //    _rigidbody.MovePosition(_rigidbody.position + _playerVelocity * Time.fixedDeltaTime);
     }
 }
